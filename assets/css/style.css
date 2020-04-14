@@ -1,9 +1,6 @@
-#web-top {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #0277bd;
-    height: 10em;
+#web-top > img {
+    width: 100%;
+    height: 24.5em;
 }
 
 #conteudo {
