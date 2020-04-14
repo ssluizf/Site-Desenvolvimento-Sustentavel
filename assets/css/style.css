@@ -1,0 +1,33 @@
+#web-top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #0277bd;
+    height: 10em;
+}
+
+#conteudo {
+    margin: 20px;
+}
+
+#conteudo > div div {
+    color: #00695c;
+}
+
+#rodape {
+    padding-top: 100px;
+    color: #01579b;
+}
+
+#rodape > p {
+    padding: 10px;
+    background-color: #a5d6a7
+}
+
+#cabecalho a {
+    cursor: pointer;
+}
+
+.card-header {
+    cursor: pointer;
+}
