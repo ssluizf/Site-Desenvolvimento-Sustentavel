@@ -2,32 +2,91 @@
 <html>
     <head lang="pt-BR">
         <!-- Metadados -->
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
         <!-- BootStrap -->
         <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- Styles -->
+        <link rel="stylesheet" href="assets/css/style.css"></link>
+
     </head>
     <body>
         
         <!-- Cabeçalho -->
-        <nav class="navbar">
-            <div class="text-primary">Hello BootStrap</div>
-        </nav>
+        <div id="web-top">
+            <h1 class="text-center align-middle">Ind. Safe</h1>
+        </div>
+        <div id="cabecalho" class="sticky-top">
+            <nav class="navbar navbar-dark navbar-expand-lg bg-dark">
+                <div class="collapse navbar-collapse">
+                    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                        <li class="nav-item"><a class="nav-link">Noticias</a></li>
+                        <li class="nav-item"><a class="nav-link">Quem Somos</a></li>
+                        <li class="nav-item"><a class="nav-link">Contato</a></li>
+                    </ul>
+                    <form class="form-inline my-2 my-lg-0">
+                        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                    </form>
+                </div>
+            </nav>
+        </div>
 
         <!-- Conteúdo Principal -->
-        <div class="container">
-            <div class="row">
-                
+        <div class="container" id="conteudo">
+            <div class="row justify-content-between">
+                <div class="col-7">
+                    <div class="card">
+                        <div class="card-body">
+                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam placeat suscipit harum consectetur possimus magni error aut atque, explicabo unde esse beatae obcaecati fuga eum consequatur omnis tempora distinctio qui.</p>
+                            <div class="embed-responsive embed-responsive-16by9">
+                                <iframe class="embed-responsive-item" src="https://www.youtube.com/watch?v=4ox" allowfullscreen></iframe>
+                            </div>
+                        </div>
+                        <div class="card-header text-center">LER MAIS</div>
+                    </div>
+                    <div class="card">
+                        <div class="card-body">
+                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam placeat suscipit harum consectetur possimus magni error aut atque, explicabo unde esse beatae obcaecati fuga eum consequatur omnis tempora distinctio qui.</p>
+                            <div class="embed-responsive embed-responsive-16by9">
+                                <iframe class="embed-responsive-item" src="https://www.youtube.com/watch?v=4ox" allowfullscreen></iframe>
+                            </div>
+                        </div>
+                        <div class="card-header text-center">LER MAIS</div>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="card">
+                        <div class="card-header">CONHECA MAIS</div>
+                        <div class="card-body">
+                            <h5 class="card-title">Card Title</h5>
+                            <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem officia neque, temporibus consequatur, accusantium similique cupiditate magni accusamus asperiores illum enim labore itaque fugiat perspiciatis aperiam fugit possimus laboriosam sint.</p>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Card Title</h5>
+                            <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem officia neque, temporibus consequatur, accusantium similique cupiditate magni accusamus asperiores illum enim labore itaque fugiat perspiciatis aperiam fugit possimus laboriosam sint.</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
 
         <!-- Rodapé -->
-        <div>
-
+        <div id="rodape">
+            <p class="card-text">Copyright © 2020 Ind. Safe, Blog</p>
         </div>
 
-        <script></script>
+        <!-- Jquery -->
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+
+        <!-- BootStrap -->
+        <script src="assets/js/bootstrap.min.js"></script>
+        
+        <!-- Scripts -->
+        <script src="assets/js/main.js"></script>
 
     </body>
 </html>
