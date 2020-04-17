@@ -1,12 +1,13 @@
 
-window.onload(cabecalho());
+window.onload(gerarElementos());
 
-function cabecalho() {
-    const el = `
+function gerarElementos() {
+    const cabecalho = `
     <div id="cabecalho" class="sticky-top">
-        <nav class="navbar navbar-dark navbar-expand-lg bg-dark">
+        <nav class="navbar navbar-dark navbar-expand-lg bg-dark pacifico">
             <div class="collapse navbar-collapse">
                 <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="index.html">HOME</a></li>
                     <li class="nav-item"><a class="nav-link" href="noticias.html">NOTÍCIAS</a></li>
                     <li class="nav-item"><a class="nav-link" href="sobre.html">QUEM SOMOS</a></li>
                     <li class="nav-item"><a class="nav-link" href="#contato">CONTATO</a></li>
@@ -18,5 +19,30 @@ function cabecalho() {
             </div>
         </nav>
     </div>`;
-    document.getElementById("web-top").outerHTML += el
+
+    const rodape = `
+    <div class="d-flex justify-content-between align-items-end text" id="rodape">
+        <p class="card-text">Copyright © 2020 Ind. Safe, Blog</p>
+        <div>
+            <div class="d-flex" id="contato">
+                <p>Contato</p>
+                <ul>
+                    <li>+55 11 94325-0000</li>
+                    <li>+55 11 94325-0000</li>
+                </ul>
+            </div>
+            <div class="d-flex" id="redes-sociais">
+                <p>Redes Sociais</p>
+                <ul class="row">
+                    <li><a href="https://www.instagram.com/?hl=pt-br"><img src="assets/img/inst.png"></a></li>
+                    <li><a href="https://twitter.com/login?lang=pt"><img src="assets/img/twt.png"></a></li>
+                    <li><a href="https://pt-br.facebook.com/"><img src="assets/img/fcb.png"></a></li>
+                    <li><a href="https://www.youtube.com/?gl=BR&hl=pt"><img src="assets/img/ytb.png"></a></li>
+                </ul> 
+            </div>  
+        </div>    
+    </div>`;
+    
+    document.getElementById("web-top").outerHTML += cabecalho;
+    document.getElementById("web-bottom").outerHTML += rodape;
 }

@@ -1,27 +1,50 @@
-body {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
+
+/* Padrões */
 
 ul {
     list-style: none;
+}
+
+img {
+    width: 100%;
+    height: 24.5em;
 }
 
 #web-top {
     display: flex;
 }
 
-#web-top > img {
-    width: 100%;
-    height: 24.5em;
+/* Cabeçalho */
+
+#cabecalho {
+    box-shadow: 2px 0px 10px #000;
 }
 
-#web-top h1 {
+#cabecalho a {
+    cursor: pointer;
+    padding-left: 2cm;
+}
+
+/* Classes */
+
+.img-blur {
+    filter: blur(3px);
+}
+
+.content-img > img {
+    padding-left: 50px;
+}
+
+.text {
+    font-family: 'Sanchez', serif;
+}
+
+.titulo h1 {
     position: absolute;
-    color: #76ff03;
-    text-shadow: 4px 4px 6px #33691e;
-    font-size: 7em;
+    z-index: 2;
+    color: #e1f5fe;
+    text-shadow: 4px 4px 6px #000;
+    font-size: 7.5em;
     font-family: 'Girassol', cursive;
     -webkit-touch-callout: none; 
     -webkit-user-select: none; 
@@ -31,40 +54,44 @@ ul {
     user-select: none;
 }
 
-#cabecalho a {
-    cursor: pointer;
-    padding-left: 2cm;
+.titulo h3 {
+    padding-bottom: 6em;
 }
 
-#conteudo {
-    margin-top: 80px;
-    padding-bottom: 80px;
-}
-
-#conteudo > div div {
-    color: #37474f;
-}
-
-#rodape {
-    background-color: #222;
-    padding-top: 100px;
-    color: #01579b;
-    display: flex;
-    flex-direction: row;
-    position: relative;
-    bottom: 0;
-    padding: 10px 20px;
-}
-
-#rodape > * {
-    padding-top: 1.5cm;
+.pacifico {
+    font-family: 'Pacifico', cursive;
+    font-size: 0.98em;
 }
 
 .card-header {
     cursor: pointer;
 }
 
-#redes-sociais > li {
+/* Conteúdo */
+
+#conteudo {
+    margin-top: 80px;
+    padding-bottom: 80px;
+}
+
+/* Rodapé */
+
+#rodape {
+    background-color: #607d8b;
+    padding: 80px 10px 20px 20px;
+    box-shadow: 2px 0px 10px #000;
+}
+
+#rodape  p {
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+#rodape li {
+    font-size: 1.1em;
+}
+
+#redes-sociais li {
     padding-right: 20px;
 }
 
@@ -73,6 +100,11 @@ ul {
     height: 1.4em;
 }
 
-#contato li {
+#contato > p {
+    padding-right: 25px;
+}
+
+#contato {
     padding-right: 45px;
+    padding-bottom: 20px;
 }
