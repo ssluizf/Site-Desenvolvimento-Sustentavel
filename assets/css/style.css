@@ -18,11 +18,23 @@ img {
 
 #cabecalho {
     box-shadow: 2px 0px 10px #000;
+    opacity: 0.90;
+}
+
+#cabecalho {
+    background-color: #014e41;
 }
 
 #cabecalho a {
     cursor: pointer;
+    color: #000;
+    font-weight: bold;
     padding-left: 2cm;
+}
+
+#cabecalho a:hover {
+    text-decoration: none;
+    color: #000;
 }
 
 /* Classes */

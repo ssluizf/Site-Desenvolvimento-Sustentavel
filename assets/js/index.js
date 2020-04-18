@@ -4,13 +4,13 @@ window.onload(gerarElementos());
 function gerarElementos() {
     const cabecalho = `
     <div id="cabecalho" class="sticky-top">
-        <nav class="navbar navbar-dark navbar-expand-lg bg-dark pacifico">
+        <nav class="navbar navbar-dark navbar-expand-lg pacifico">
             <div class="collapse navbar-collapse">
                 <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-                    <li class="nav-item"><a class="nav-link" href="index.html">HOME</a></li>
-                    <li class="nav-item"><a class="nav-link" href="noticias.html">NOTÍCIAS</a></li>
-                    <li class="nav-item"><a class="nav-link" href="sobre.html">QUEM SOMOS</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#contato">CONTATO</a></li>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="noticias.html">NOTÍCIAS</a></li>
+                    <li><a href="sobre.html">QUEM SOMOS</a></li>
+                    <li><a href="#contato">CONTATO</a></li>
                 </ul>
                 <form class="form-inline my-2 my-lg-0">
                     <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
