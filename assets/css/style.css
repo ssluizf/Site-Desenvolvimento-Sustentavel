@@ -86,11 +86,15 @@ img {
     padding-bottom: 80px;
 }
 
+.card{
+    margin-bottom: 2em;
+}
+
 /* Rodapé */
 
 #rodape {
     background-color: #607d8b;
-    padding: 80px 10px 20px 20px;
+    padding: 40px 10px 20px 20px;
     box-shadow: 2px 0px 10px #000;
 }
 
@@ -127,5 +131,11 @@ img {
     }
     .titulo h1{
         font-size: 3.5em;
+    }
+}
+
+@media(max-width: 989px){
+    #cabecalho a{
+        padding: 0cm;
     }
 }

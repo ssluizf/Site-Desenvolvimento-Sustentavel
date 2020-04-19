@@ -22,17 +22,17 @@ function gerarElementos() {
     </div>`;
 
     const rodape = `
-    <div class="d-flex justify-content-between align-items-end text" id="rodape">
+    <div class="row justify-content-between align-items-end text" id="rodape">
         <p class="card-text">Copyright © 2020 Ind. Safe, Blog</p>
         <div>
-            <div class="d-flex" id="contato">
+            <div class="cl-4" id="contato">
                 <p>Contato</p>
                 <ul>
                     <li>+55 11 94325-0000</li>
                     <li>+55 11 94325-0000</li>
                 </ul>
             </div>
-            <div class="d-flex" id="redes-sociais">
+            <div class="cl-4" id="redes-sociais">
                 <p>Redes Sociais</p>
                 <ul class="row">
                     <li><a href="https://www.instagram.com/?hl=pt-br"><img src="assets/img/inst.png"></a></li>
