@@ -5,7 +5,8 @@ function gerarElementos() {
     const cabecalho = `
     <div id="cabecalho" class="sticky-top">
         <nav class="navbar navbar-dark navbar-expand-lg pacifico">
-            <div class="collapse navbar-collapse">
+        <button class="navbar-toggler toggler-example" type="button" data-toggle="collapse" data-target="#navbarSupportedContent1" aria-controls="navbarSupportedContent1" aria-expanded="false" aria-label="Toggle navigation"><span class="dark-blue-text"><i class="navbar-toggler-icon"></i></span></button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent1">
                 <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
                     <li><a href="index.html">HOME</a></li>
                     <li><a href="noticias.html">NOTÍCIAS</a></li>
@@ -13,8 +14,8 @@ function gerarElementos() {
                     <li><a href="#contato">CONTATO</a></li>
                 </ul>
                 <form class="form-inline my-2 my-lg-0">
-                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-info my-2 my-sm-0" type="submit">Search</button>
+                    <input class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Search">
+                    <button class="btn btn-outline-info my-2 my-sm-0" type="submit">Buscar</button>
                 </form>
             </div>
         </nav>

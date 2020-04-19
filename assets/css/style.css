@@ -120,3 +120,12 @@ img {
     padding-right: 45px;
     padding-bottom: 20px;
 }
+
+@media(max-width: 1200px){
+    img{
+        height: 8.5em;
+    }
+    .titulo h1{
+        font-size: 3.5em;
+    }
+}
