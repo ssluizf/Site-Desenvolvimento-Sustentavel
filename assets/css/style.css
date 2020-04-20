@@ -1,6 +1,11 @@
 
 /* Padrões */
 
+body {
+    overflow-x: hidden; 
+    overflow-y: auto;
+}
+
 ul {
     list-style: none;
 }
@@ -18,23 +23,19 @@ img {
 
 #cabecalho {
     box-shadow: 2px 0px 10px #000;
-    opacity: 0.90;
-}
-
-#cabecalho {
     background-color: #014e41;
+    opacity: 0.90;
 }
 
 #cabecalho a {
     cursor: pointer;
     color: #000;
     font-weight: bold;
-    padding-left: 1.5cm;
+    padding-left: 1.8cm;
 }
 
 #cabecalho a:hover {
     text-decoration: none;
-    color: #000;
 }
 
 /* Classes */
@@ -125,6 +126,8 @@ img {
     padding-bottom: 20px;
 }
 
+/* Media Queries */
+
 @media(max-width: 1200px){
     img{
         height: 8.5em;
@@ -137,5 +140,31 @@ img {
 @media(max-width: 989px){
     #cabecalho a{
         padding: 0cm;
+    }
+
+    #cabecalho > nav > div {
+        margin-top: -10px;
+    }
+
+    #cabecalho ul {
+        display: flex;
+        margin-top: 0px;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    #cabecalho li {
+        padding-bottom: 0.2em;
+    }
+
+}
+
+@media(max-width: 580px) {
+    #search-box > button {
+        display: none;
+    }
+
+    #search-box input[type=search]:focus ~ button {
+        display: block;
     }
 }
