@@ -1,5 +1,5 @@
 
-window.onload(gerarElementos());
+window.onload = gerarElementos();
 
 function gerarElementos() {
     const cabecalho = `
@@ -47,3 +47,35 @@ function gerarElementos() {
     document.getElementById("web-top").outerHTML += cabecalho;
     document.getElementById("web-bottom").outerHTML += rodape;
 }
+
+var ctx = document.getElementById('chart').getContext('2d');
+var chart = new Chart(ctx, {
+
+    type: 'bar',
+
+    data: {
+        labels: ['Eólica', 'Solar', 'Hídrica', 'Nuclear'],
+        datasets: [{
+            label: 'Pesquisa Desenvolvimento Sustentável',
+            backgroundColor: [
+                '#306e32',
+                '#cc7a00',
+                'rgb(1, 87, 155, 0.7)',
+                '#a99700',
+            ],
+            borderColor: 'rgb(0, 0, 0, 0.1)',
+            borderWidth: 3,
+            borderSkipped: "bottom",
+            data: [1, 10, 5, 2],
+        }],
+        labels: [
+            'Eólica',
+            'Solar',
+            'Hídrica',
+            'Nuclear',
+        ],
+    },
+
+    options: {
+    }
+});
