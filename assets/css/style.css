@@ -4,6 +4,16 @@
 body {
     overflow-x: hidden; 
     overflow-y: auto;
+    background-color: #f2f2f2;
+}
+
+h1, h2, img, #cabecalho, #rodape, .card-header{
+    -webkit-touch-callout: none; 
+    -webkit-user-select: none; 
+    -khtml-user-select: none; 
+    -moz-user-select: none; 
+    -ms-user-select: none;
+    user-select: none;
 }
 
 ul {
@@ -15,7 +25,7 @@ img {
     height: 24.5em;
 }
 
-#web-top {
+#web-top, #web-bottom {
     display: flex;
 }
 
@@ -38,15 +48,22 @@ img {
     text-decoration: none;
 }
 
-/* Classes */
+/* Conteúdo */
+
+#conteudo {
+    margin-top: 80px;
+    padding-bottom: 80px;
+}
+
+#question p {
+    font-size: 2em;
+}
 
 .img-blur {
     filter: blur(3px);
 }
 
-.text {
-    font-family: 'Sanchez', serif;
-}
+/* Titulo */
 
 .titulo h1 {
     position: absolute;
@@ -55,36 +72,53 @@ img {
     text-shadow: 4px 4px 6px #000;
     font-size: 7.5em;
     font-family: 'Girassol', cursive;
-    -webkit-touch-callout: none; 
-    -webkit-user-select: none; 
-    -khtml-user-select: none; 
-    -moz-user-select: none; 
-    -ms-user-select: none;
-    user-select: none;
+}
+
+.titulo h2 {
+    padding-bottom: 1em;
+    font-size: 7em;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 .titulo h3 {
-    padding-bottom: 6em;
+    padding: 2em 0 2em 0;
+    font-size: 3em;
+    font-weight: bold;
 }
 
-.pacifico {
-    font-family: 'Pacifico', cursive;
-    font-size: 0.98em;
+/* Listas */
+
+.list {
+    padding-bottom: 4em;
+}
+
+.list > li {
+    font-size: 2em;
+    padding-bottom: 4px;
+}
+
+/* Cards */
+
+.card {
+    margin-bottom: 2em;
 }
 
 .card-header {
     cursor: pointer;
 }
 
-/* Conteúdo */
+/* Fonts */
 
-#conteudo {
-    margin-top: 80px;
-    padding-bottom: 80px;
+.font-pacifico {
+    font-family: 'Pacifico', cursive;
 }
 
-.card{
-    margin-bottom: 2em;
+.font-sanchez {
+    font-family: 'Sanchez', serif;
+}
+
+.font-frank {
+    font-family: 'Frank Ruhl Libre', serif;
 }
 
 /* Rodapé */
