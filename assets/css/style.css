@@ -44,10 +44,6 @@ img {
     filter: blur(3px);
 }
 
-.content-img > img {
-    padding-left: 50px;
-}
-
 .text {
     font-family: 'Sanchez', serif;
 }

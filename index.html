@@ -38,7 +38,7 @@
                     <div class="card">
                         <div class="card-body">
                             <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam placeat suscipit harum consectetur possimus magni error aut atque, explicabo unde esse beatae obcaecati fuga eum consequatur omnis tempora distinctio qui.</p>
-                            <canvas id="chart"></canvas>
+                            <canvas id="chart01"></canvas>
                         </div>
                         <div class="card-header text-center">LER MAIS</div>
                     </div>
@@ -82,6 +82,41 @@
         
         <!-- Scripts -->
         <script src="assets/js/index.js"></script>
+        
+        <!-- GraphJS -->
+        <script>
+            const ctx = document.getElementById('chart01').getContext('2d');
+            const chart = new Chart(ctx, {
+
+                type: 'bar',
+
+                data: {
+                    labels: ['Eólica', 'Solar', 'Hídrica', 'Nuclear'],
+                    datasets: [{
+                        label: 'Pesquisa Desenvolvimento Sustentável',
+                        backgroundColor: [
+                            '#306e32',
+                            '#cc7a00',
+                            'rgb(1, 87, 155, 0.7)',
+                            '#a99700',
+                        ],
+                        borderColor: 'rgb(0, 0, 0, 0.1)',
+                        borderWidth: 3,
+                        borderSkipped: "bottom",
+                        data: [1, 10, 5, 2],
+                    }],
+                    labels: [
+                        'Eólica',
+                        'Solar',
+                        'Hídrica',
+                        'Nuclear',
+                    ],
+                },
+
+                options: {
+                }
+            });
+        </script>
 
     </body>
 </html>

@@ -39,7 +39,7 @@
             </div>
             <div class="justify-content-start d-flex content-img">
                 <h3>O quanto as pessoas conhecem sobre Desenvolvimento Sustentável?</h3>
-                <img src=".img">
+                <canvas id="chart02"></canvas>
             </div>
             <div class="align-items-center justify-content-center d-flex" id="conteudo">
                 <h3>Impacto da Economia Circular no Brasil</h3>
@@ -60,6 +60,41 @@
         
         <!-- Scripts -->
         <script src="assets/js/index.js"></script>
+
+        <!-- GraphJS-->
+        <script>
+            const ctx2 = document.getElementById('chart02').getContext('2d');
+            const chart2 = new Chart(ctx2, {
+
+                type: 'pie',
+
+                data: {
+                    labels: ['Eólica', 'Solar', 'Hídrica', 'Nuclear'],
+                    datasets: [{
+                        label: 'Pesquisa Desenvolvimento Sustentável',
+                        backgroundColor: [
+                            '#306e32',
+                            '#cc7a00',
+                            'rgb(1, 87, 155, 0.7)',
+                            '#a99700',
+                        ],
+                        borderColor: 'rgb(0, 0, 0, 0.1)',
+                        borderWidth: 3,
+                        borderSkipped: "bottom",
+                        data: [1, 1, 5, 2],
+                    }],
+                    labels: [
+                        'Eólica',
+                        'Solar',
+                        'Hídrica',
+                        'Nuclear',
+                    ],
+                },
+
+                options: {
+                }
+            });
+        </script>
 
     </body>
 </html>
