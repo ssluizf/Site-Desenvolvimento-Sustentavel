@@ -4,7 +4,7 @@ window.onload(gerarElementos());
 function gerarElementos() {
     const cabecalho = `
     <div id="cabecalho" class="sticky-top">
-        <nav class="navbar navbar-dark navbar-expand-lg pacifico">
+        <nav class="navbar navbar-dark navbar-expand-lg font-pacifico">
         <button class="navbar-toggler toggler-example" type="button" data-toggle="collapse" data-target="#navbarSupportedContent1" aria-controls="navbarSupportedContent1" aria-expanded="false" aria-label="Toggle navigation"><span class="dark-blue-text"><i class="navbar-toggler-icon"></i></span></button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent1">
             <ul class="navbar-nav mr-auto mt-lg-0">
