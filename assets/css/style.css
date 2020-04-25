@@ -55,10 +55,6 @@ img {
     padding-bottom: 80px;
 }
 
-#question p {
-    font-size: 2em;
-}
-
 .img-blur {
     filter: blur(3px);
 }
@@ -71,29 +67,27 @@ img {
     color: #e1f5fe;
     text-shadow: 4px 4px 6px #000;
     font-size: 7.5em;
-    font-family: 'Girassol', cursive;
 }
 
 .titulo h2 {
     padding-bottom: 1em;
-    font-size: 7em;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 3.5em;
 }
 
 .titulo h3 {
-    padding: 2em 0 2em 0;
-    font-size: 3em;
+    padding: 0 0 2em 0;
+    font-size: 2.5em;
     font-weight: bold;
 }
 
 /* Listas */
 
-.list {
+.texto {
     padding-bottom: 4em;
+    font-size: 1.5em;
 }
 
-.list > li {
-    font-size: 2em;
+.texto li, p {
     padding-bottom: 4px;
 }
 
@@ -119,6 +113,10 @@ img {
 
 .font-frank {
     font-family: 'Frank Ruhl Libre', serif;
+}
+
+.font-girassol {
+    font-family: 'Girassol', cursive;
 }
 
 /* Rodapé */
