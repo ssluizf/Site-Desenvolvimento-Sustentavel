@@ -22,7 +22,7 @@ function gerarElementos() {
     </div>`;
 
     const rodape = `
-    <div class="row justify-content-between align-items-end text" id="rodape">
+    <div class="row justify-content-between align-items-end text night-mode" id="rodape">
         <p class="card-text">Copyright © 2020 Ind. Safe, Blog</p>
         <div>
             <div class="cl-4" id="contato">
