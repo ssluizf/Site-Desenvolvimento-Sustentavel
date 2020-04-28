@@ -48,22 +48,32 @@
             <div class="row texto">
                 <p class="col-md-5 text-justify">Para uma empresa com uma fábrica que deseja utilizar energia limpa para a diminuição de admissão dos gases do efeito estufa, é mais viável utilizar:</p>
                 <canvas class="col-md-7" id="chart02"></canvas>
+                <div class="col-lg-8 pt-5">
+                    <p class="text-center">Qual tipo de resíduos você acredita que tem uma produção elevada?</p>
+                    <canvas id="chart03"></canvas>
+                </div>
             </div>
             
 
             <h3 class="text-center">Impacto da Economia Circular no Brasil</h3>
 
-            <div class="text-justify texto">
-                <p class="col-sm-6">A Economia Circular é uma forma de incentivar as indústrias a construção do reuso dos materiais e assim, proporcionando as pessoas um gasto bem menor e, poupando a natureza de estoque de matérias-primas. Contudo, como isso tem ocorrido, principalmente, no Brasil?</p>
-                <p class="col-sm-6">No Brasil, juntamente, com as Indústrias Sustentáveis, tem-se implementado o reuso dos materiais e, desse modo, as próprias indústrias tem levado essas novas informações as escolas, aos cursos técnicos e, em reuniões públicas, com o objetivo de incentivar para que possam descartar em lugares corretos, para assim, reiniciar o ciclo.</p>
+            <div class="row text-justify texto">
+                <div class="col-lg-6">
+                    <p>A Economia Circular é uma forma de incentivar as indústrias a construção do reuso dos materiais e assim, proporcionando as pessoas um gasto bem menor e, poupando a natureza de estoque de matérias-primas. Contudo, como isso tem ocorrido, principalmente, no Brasil?</p>
+                <p>No Brasil, juntamente, com as Indústrias Sustentáveis, tem-se implementado o reuso dos materiais e, desse modo, as próprias indústrias tem levado essas novas informações as escolas, aos cursos técnicos e, em reuniões públicas, com o objetivo de incentivar para que possam descartar em lugares corretos, para assim, reiniciar o ciclo.</p>
+                </div>
+                <div class="col-lg-6">
+                    <p>O que você entende como industrias sustentáveis e economia circular?</p>
+                    <canvas id="chart04" height="200px"></canvas>
+                </div>
             </div>
         </div>
 
         <nav class="p-4" aria-label="Page navigation example">
             <ul class="nav-pills pagination justify-content-center">
-              <li class="page-item"><a class="page-link" href="#">Anterior</a></li>
-              <li class="page-item"><a class="page-link" href="#">1</a></li>
-              <li class="page-item"><a class="page-link" href="#">2</a></li>
+              <li class="page-item"><a class="page-link" href="javascript:history.back()">Anterior</a></li>
+              <li class="page-item"><a class="page-link" href="noticias.html">1</a></li>
+              <li class="page-item"><a class="page-link" href="noticias02.html">2</a></li>
               <li class="page-item"><a class="page-link" href="#">3</a></li>
               <li class="page-item"><a class="page-link" href="#">Próximo</a></li>
             </ul>
@@ -84,27 +94,29 @@
         <!-- Scripts -->
         <script src="assets/js/index.js"></script>
 
-        <!-- GraphJS-->
+        <!-- ChartJS-->
         <script>
             const ctx2 = document.getElementById('chart02').getContext('2d');
             const chart2 = new Chart(ctx2, {
 
-                type: 'pie',
+                type: 'line',
 
                 data: {
-                    labels: ['Eólica', 'Solar', 'Hídrica', 'Nuclear'],
                     datasets: [{
                         label: 'Pesquisa Desenvolvimento Sustentável',
-                        backgroundColor: [
-                            '#306e32',
-                            '#cc7a00',
-                            'rgb(1, 87, 155, 0.7)',
-                            '#a99700',
-                        ],
-                        borderColor: 'rgb(0, 0, 0, 0.1)',
+                        backgroundColor: 'rgb(0, 204, 255, 0.3)',
+                        borderColor: 'rgb(0, 204, 255, 0.3)',
                         borderWidth: 3,
-                        borderSkipped: "bottom",
-                        data: [1, 1, 5, 2],
+                        pointRadius: 11,
+                        pointBorderColor: "rgb(0, 204, 255, 0.2)",
+                        pointHoverRadius: 15,
+                        pointBackgroundColor: [
+                            '#4eac12',
+                            '#cc2900',
+                            '#007ecc',
+                            '#cc8900',
+                        ],
+                        data: [28, 67, 5, 1],
                     }],
                     labels: [
                         'Eólica',
@@ -115,6 +127,87 @@
                 },
 
                 options: {
+                    legend: {
+                            labels: {
+                                fontSize: 12,
+                                fontColor: 'black'
+                            }
+                        }
+                }
+            });
+
+            const ctx3 = document.getElementById('chart03').getContext('2d');
+            const chart3 = new Chart(ctx3, {
+
+                type: 'pie',
+
+                data: {
+                    datasets: [{
+                        label: 'Qual tipo de resíduos você acredita que tem uma produção elevada?',
+                        backgroundColor: [
+                            '#4eac12',
+                            '#cc2900',
+                            '#007ecc',
+                            '#cc8900',
+                        ],
+                        borderColor: 'rgb(0, 0, 0, 0.8)',
+                        borderWidth: 2,
+                        data: [32, 7, 61, 1],
+                    },],
+                    labels: [
+                        'Resíduos Indústrias',
+                        'Resíduos Domésticos',
+                        'Ambas tem uma produção elevada',
+                        'Ambas tem uma produção baixa', 
+                    ],
+                },
+
+                options: {
+                    legend: {
+                            labels: {
+                                fontSize: 14,
+                                fontColor: 'black'
+                            }
+                        }
+                }
+            });
+
+            const ctx4 = document.getElementById('chart04').getContext('2d');
+            const chart4 = new Chart(ctx4, {
+
+                type: 'doughnut',
+
+                data: {
+                    datasets: [{
+                        label: 'O que você entende como industrias sustentáveis e economia circular?',
+                        backgroundColor: [
+                            'rgb(242, 242, 242)',
+                            'rgb(204, 122, 0)',
+                            'rgb(169, 0, 0)',
+                            'rgb(58, 76, 84)',
+                        ],
+                        borderColor: 'rgb(255, 255, 255)',
+                        borderWidth: 2,
+                        data: [12, 24, 4, 60],
+                    },],
+                    labels: [
+                        'Nunca ouvi falar',
+                        'Áreas diferentes, mas que se correlacionam no final',
+                        'Economia circular não se complementa com as Indústrias Sustentáveis',
+                        'Já ouvi falar, mas nunca pesquisei', 
+                    ],
+                },
+
+                options: {
+                    xAxes: [{
+                            display: false,
+                        }],
+                    legend: {
+                            labels: {
+                                fontSize: 14,
+                                fontColor: 'black',
+                            }
+                        }
                 }
             });
         </script>
