@@ -35,9 +35,7 @@
         
         <div class="container titulo font-frank" id="conteudo">
             <h3 class="text-center">Sejam bem-vindos</h3>
-            <p class="text-justify">Nessa página poderão encontrar as pesquisas realizadas sobre as Indústrias Sustentáveis e os ramos do Desenvolvimento Sustentável. Poderão visualizar as empresas que atualmente trabalham com a sustentabilidade, além de, estar a par de todas as notícias no ramo da sustentabilidade. Então venha conhecer mais!</p>
-            <br>
-            <br>
+            <p class="text-justify texto">Nessa página poderão encontrar as pesquisas realizadas sobre as Indústrias Sustentáveis e os ramos do Desenvolvimento Sustentável. Poderão visualizar as empresas que atualmente trabalham com a sustentabilidade, além de, estar a par de todas as notícias no ramo da sustentabilidade. Então venha conhecer mais!</p>
             <h3 class="text-center">Empresas Participantes das Indústrias Sustentáveis</h3>
             <ul class="card-text texto">
                 <li><strong>Natura:</strong> trabalha com a preservação da Amazônia</li>
@@ -103,22 +101,29 @@
             const ctx2 = document.getElementById('chart02').getContext('2d');
             const chart2 = new Chart(ctx2, {
 
-                type: 'line',
+                type: 'bar',
 
                 data: {
                     datasets: [{
                         label: 'Pesquisa Desenvolvimento Sustentável',
-                        backgroundColor: 'rgb(0, 204, 255, 0.3)',
-                        borderColor: 'rgb(0, 204, 255, 0.3)',
+                        backgroundColor: [
+                        'rgb(0, 255, 100, 0.4)',
+                        'rgb(255, 0, 50, 0.4)',
+                        'rgb(0, 100, 255, 0.4)',
+                        'rgb(255, 200, 0, 0.4)',
+                        ],
+                        borderColor: [
+                        'rgb(0, 255, 100, 0.5)',
+                        'rgb(255, 0, 100, 0.5)',
+                        'rgb(0, 100, 255, 0.5)',
+                        'rgb(255, 100, 0, 0.5)',
+                        ],
                         borderWidth: 3,
-                        pointRadius: 11,
-                        pointBorderColor: "rgb(0, 204, 255, 0.2)",
-                        pointHoverRadius: 15,
-                        pointBackgroundColor: [
-                            '#4eac12',
-                            '#cc2900',
-                            '#007ecc',
-                            '#cc8900',
+                        hoverBackgroundColor: [
+                        'rgb(0, 255, 50, 0.5)',
+                        'rgb(255, 0, 0, 0.5)',
+                        'rgb(0, 50, 255, 0.5)',
+                        'rgb(255, 100, 0, 0.5)',
                         ],
                         data: [28, 67, 5, 1],
                     }],
@@ -131,9 +136,30 @@
                 },
 
                 options: {
+                    scales: {
+                        xAxes: [{
+                            ticks: {
+                                fontSize: 16,
+                                fontColor: 'black',
+                            },
+                            gridLines: {
+                                tickMarkLength: 14,
+                            }
+                        }],
+                        yAxes: [{
+                            ticks: {
+                                fontSize: 16,
+                                fontColor: 'black',
+                                stepSize: 10,
+                            },
+                            gridLines: {
+                                tickMarkLength: 12,
+                            }
+                        }],
+                    },
                     legend: {
                             labels: {
-                                fontSize: 12,
+                                fontSize: 16,
                                 fontColor: 'black'
                             }
                         }
