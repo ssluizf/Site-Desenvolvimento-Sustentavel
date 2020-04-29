@@ -34,7 +34,7 @@
         <div class="container" id="conteudo">
             <div class="titulo font-sanchez" id="search-page">
                 <h2 class="p-0">Procurando alguma coisa?</h2>
-                <p class="texto text-muted ml-4">Use nosso dispositivo de busca ou navegue nos butões acima.</p>
+                <p class="texto text-muted ml-4">Use nosso dispositivo de busca ou navegue nos botões acima.</p>
             </div>
         </div>
 
@@ -52,6 +52,76 @@
         
         <!-- Scripts -->
         <script src="assets/js/index.js"></script>
+        <script>
+        function search(inp, pages, text, nav) {
+
+            if (inp.value) {
+                let a, i, val = inp.value;
+
+                closeAllLists()
+                createSearchItems(a, i, val)
+            }
+
+            inp.addEventListener("input", function(e) {
+                let a, i, val = this.value;
+
+                if (!val) { return false;}
+                closeAllLists()
+                createSearchItems(a, i, val)
+            })
+
+            function createSearchItems(a, i, val) {
+                for (i = 0; i < pages.length; i++) {
+                    if (pages[i].substr(0, val.length).toUpperCase() == val.toUpperCase() || nav[i].substr(0, val.length).toUpperCase() == val.toUpperCase()) {
+                        a = document.createElement("DIV");
+                        a.innerHTML = "<a href="+ nav[i] +"><h2 class='p-0'>" + pages[i] + "</h2></a>"+
+                        "<p class='texto text-muted ml-4'>"+ text[i] +"</p>" ;
+                        a.setAttribute("class", "search-item");
+                        document.getElementById("search-page").appendChild(a);
+                    }
+                }
+            }
+
+            function closeAllLists(elmnt) {
+                var x = document.getElementsByClassName("search-item");
+                for (var i = 0; i < x.length; i++) {
+                    if (elmnt != x[i] && elmnt != inp) {
+                    x[i].parentNode.removeChild(x[i]);
+                    }
+                }
+            }
+        }
+
+        function queryString(parameter) {  
+            var loc = location.search.substring(1, location.search.length);   
+            var param_value = false;   
+            var params = loc.split("&");   
+            for (i=0; i<params.length;i++) {   
+                param_name = params[i].substring(0,params[i].indexOf('='));   
+                if (param_name == parameter) {                                          
+                    param_value = params[i].substring(params[i].indexOf('=')+1)   
+                }   
+            }   
+            if (param_value) {   
+                return param_value;   
+            }   
+            else {   
+                return undefined;   
+            }   
+        }
+
+        let pages = ["Home", "Notícias", "Quem Somos?"]
+        let nav = ["index.html", "noticias.html", "sobre.html"]
+        let text = [
+            "Venha visitar nossa página inicial",
+            "As últimas notícias sobre a indústria e o Desenvolvimento Sustentável",
+            "Um pouco da nossa história",
+        ]
+
+        queryString("inputValue") != undefined ? document.getElementById("input").value = queryString("inputValue") : ""
+
+        search(document.getElementById("input"), pages, text, nav);
+        </script>
 
     </body>
 </html>

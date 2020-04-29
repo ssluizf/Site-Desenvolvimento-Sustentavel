@@ -13,9 +13,9 @@ function gerarElementos() {
                 <li><a href="sobre.html">QUEM SOMOS</a></li>
                 <li><a href="#contato">CONTATO</a></li>
             </ul>
-            <form class="form-row justify-content-center my-2 my-lg-0" name="theForm" action="search.html" id="search-box">
+            <form class="form-row justify-content-center my-2 my-lg-0" autocomplete=off id="search-box">
                 <input class="col-sm-8 form-control mr-sm-4" type="search" id="input" placeholder="Buscar" aria-label="Search">
-                <button class="btn btn-outline-info my-2 my-sm-0" type="submit">Buscar</button>
+                <button class="btn btn-outline-info my-2 my-sm-0" type="button" id="search-button">Buscar</button>
             </form>
         </div>
         </nav>
@@ -48,40 +48,25 @@ function gerarElementos() {
     document.getElementById("web-bottom").outerHTML += rodape;
 }
 
-function search(inp, pages, text, nav) {
-    inp.addEventListener("input", function(e) {
-        let a, i, val = this.value;
-
-        if (!val) { return false;}
-        closeAllLists()
-
-        for (i = 0; i < pages.length; i++) {
-            if (pages[i].substr(0, val.length).toUpperCase() == val.toUpperCase()) {
-                a = document.createElement("DIV");
-                a.innerHTML = "<a href="+ nav[i] +"><h2 class='p-0'>" + pages[i] + "</h2></a>"+
-                "<p class='texto text-muted ml-4'>"+ text[i] +"</p>" ;
-                a.setAttribute("class", "search-item");
-                document.getElementById("search-page").appendChild(a);
-            }
-        }
-    })
-
-    function closeAllLists(elmnt) {
-        var x = document.getElementsByClassName("search-item");
-        for (var i = 0; i < x.length; i++) {
-            if (elmnt != x[i] && elmnt != inp) {
-            x[i].parentNode.removeChild(x[i]);
-            }
-        }
-    }
+function passaValor(inp) {
+    window.location = "search.html?inputValue="+inp;
 }
 
-let pages = ["Home", "Notícias", "Quem Somos?"]
-let nav = ["index.html", "noticias.html", "sobre.html"]
-let text = [
-    "Venha visitar nossa página inicial",
-    "As últimas notícias sobre a indústria e o Desenvolvimento Sustentável",
-    "Um pouco da nossa história",
-]
+function eventosPesquisa() {
+    const button = document.getElementById("search-button");
+    const input = document.getElementById("input")
 
-search(document.getElementById("input"), pages, text, nav);
+    button.addEventListener("click", function() {
+        let inpValue = input.value
+        passaValor(inpValue)
+    })
+
+    input.addEventListener("keypress", function(event) {
+        if (event.which == 13) {
+            event.preventDefault()
+            button.click()
+        }
+    });
+}
+
+eventosPesquisa();
