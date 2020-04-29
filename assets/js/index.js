@@ -13,9 +13,9 @@ function gerarElementos() {
                 <li><a href="sobre.html">QUEM SOMOS</a></li>
                 <li><a href="#contato">CONTATO</a></li>
             </ul>
-            <form class="form-row justify-content-center my-2 my-lg-0" id="search-box">
-                <input class="col-sm-8 form-control mr-sm-4" type="search" placeholder="Buscar" aria-label="Search">
-                <button class="btn btn-outline-info my-2 my-sm-0" type="submit">Buscar</button>
+            <form class="form-row justify-content-center my-2 my-lg-0" autocomplete=off id="search-box">
+                <input class="col-sm-8 form-control mr-sm-4" type="search" id="input" placeholder="Buscar" aria-label="Search">
+                <button class="btn btn-outline-info my-2 my-sm-0" type="button" id="search-button">Buscar</button>
             </form>
         </div>
         </nav>
@@ -47,3 +47,26 @@ function gerarElementos() {
     document.getElementById("web-top").outerHTML += cabecalho;
     document.getElementById("web-bottom").outerHTML += rodape;
 }
+
+function passaValor(inp) {
+    window.location = "search.html?inputValue="+inp;
+}
+
+function eventosPesquisa() {
+    const button = document.getElementById("search-button");
+    const input = document.getElementById("input")
+
+    button.addEventListener("click", function() {
+        let inpValue = input.value
+        passaValor(inpValue)
+    })
+
+    input.addEventListener("keypress", function(event) {
+        if (event.which == 13) {
+            event.preventDefault()
+            button.click()
+        }
+    });
+}
+
+eventosPesquisa();
