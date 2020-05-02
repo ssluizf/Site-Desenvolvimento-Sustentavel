@@ -9,7 +9,7 @@ body {
     height: 100%;
 }
 
-h1, h2, img, #cabecalho, #rodape, .card-header{
+h1, img, #cabecalho, #rodape, .card-header{
     -webkit-touch-callout: none; 
     -webkit-user-select: none; 
     -khtml-user-select: none; 
@@ -49,14 +49,14 @@ img {
     opacity: 0.90;
 }
 
-#cabecalho a {
+#cabecalho a, #search-page a {
     cursor: pointer;
     color: #000;
     font-weight: bold;
     padding-left: 1.8cm;
 }
 
-#cabecalho a:hover {
+a:hover {
     text-decoration: none;
 }
 
