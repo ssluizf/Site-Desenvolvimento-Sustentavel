@@ -33,12 +33,28 @@ img {
 
 .night-mode {
     background-color: #1f2123;
-    color: #e1f5fe;
+    color: #e1f5fe !important;
+}
+
+.night-mode a {
+    background-color: #1f2123 !important;
+    color: #e1f5fe !important;
 }
 
 .night-mode[id=rodape]{
     background-color: #263238 !important;
     box-shadow: 2px 0px 10px #263238 !important;
+}
+
+.night-mode .card {
+    background-color: #263238 !important;
+}
+
+#dark-switch {
+    position: absolute;
+    right: 10px;
+    background-color: transparent;
+    padding-top: 10px;
 }
 
 /* Cabeçalho */
@@ -109,8 +125,9 @@ a:hover {
     margin-bottom: 2em;
 }
 
-.card-header {
+.card-header a {
     cursor: pointer;
+    background-color: transparent !important;
 }
 
 /* Fonts */
@@ -155,6 +172,10 @@ a:hover {
 #redes-sociais img {
     width: 1.4em;
     height: 1.4em;
+}
+
+#redes-sociais a {
+    background-color: transparent !important;
 }
 
 #contato > p {
@@ -204,7 +225,7 @@ a:hover {
         display: none;
     }
 
-    #search-box input[type=search]:focus ~ button {
+    #search-box:hover #search-button {
         display: block;
     }
 }

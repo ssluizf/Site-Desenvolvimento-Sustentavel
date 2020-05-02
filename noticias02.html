@@ -28,13 +28,16 @@
         <div id="web-top"></div>
 
         <!-- Conteúdo Principal -->
-        
-        <div class="align-items-center justify-content-center d-flex titulo">
-            <h1 class="font-girassol">Notícias</h1>
-            <img class="img-blur" src="assets/img/noticias02.png">
-        </div>
 
-        <div class="night-mode">
+        <div class="nt-m">
+            <div class="align-items-center justify-content-center d-flex titulo">
+                <h1 class="font-girassol">Notícias</h1>
+                <img class="img-blur" src="assets/img/noticias02.png">
+            </div>
+            <div class="custom-control nt-m custom-switch" id="dark-switch">
+                <input type="checkbox" class="custom-control-input" id="customSwitch1">
+                <label class="custom-control-label" for="customSwitch1">DarkMode</label>
+            </div>
             <div class="container titulo font-frank" id="conteudo">
                 <div class="texto">
                     <p>Você acredita que toda matéria-prima é infinita?</p>
@@ -44,6 +47,9 @@
                     <p>Se você fosse encarregado de gerir uma nova gestão em sua indústria, para ingressa-la no quadro do “Desenvolvimento Sustentável”. Qual medida imediata você tomaria?</p>
                     <canvas id="chart06"></canvas>
                 </div>
+                <h3>O Rompimento da Barragem em Brumadinho: Causa sérios danos ao meio ambiente e impacto na produção das indústrias mineradoras.</h3>
+                <p class="texto">Dados do IBGE revelam que no em 2019 o setor de produção industrial recuou 1,1%. Em decorrência, ao Rompimento da Barragem de Brumadinho, o setor extrativo apresentou grande queda nos Estados de Minas Gerais (-25,3%) e Espírito Santo (-21,1%), marcando negativamente o setor no ano do acidente.</p>
+                <p class="texto">A barragem continha rejeitos de uma mina da empresa Vale, com seu rompimento instalações da mina e casas vizinhas foram cobertas por um rio de lama em questões de segundos. A contagem de vítimas revela 224 mortos e 69 desaparecidos (IBGE), os municípios de Brumadinho e Rio Paraopeba foram afetados pelos rejeitos espalhados. Os danos ao meio ambiente causados, podem ser devidamente relacionados ao descaso a fiscalização e verbas públicas a preservação do meio ambiente, que estavam cada vez mais crescentes, a exemplo, o Ministério do Meio Ambiente estava em processo de extinção, na medida, que no período o atual presidente Jair Bolsonaro planejava a fusão dos Ministérios do Meio Ambiente e da Agricultura.</p>    
             </div>
             <nav class="p-4" aria-label="Page navigation example">
                 <ul class="nav-pills pagination justify-content-center">
@@ -107,7 +113,6 @@
                     legend: {
                             labels: {
                                 fontSize: 14,
-                                fontColor: '#e1f5fe',
                             }
                         }
                 }
@@ -146,7 +151,6 @@
                     legend: {
                             labels: {
                                 fontSize: 14,
-                                fontColor: '#e1f5fe',
                             }
                         }
                 }

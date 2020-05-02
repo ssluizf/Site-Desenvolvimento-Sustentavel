@@ -28,58 +28,64 @@
         <div id="web-top"></div>
 
         <!-- Conteúdo Principal -->
-        <div class="align-items-center justify-content-center d-flex titulo">
-            <h1 class="font-girassol">Notícias</h1>
-            <img class="img-blur" src="assets/img/industria.jpg">
-        </div>
-        
-        <div class="container titulo font-frank" id="conteudo">
-            <h3 class="text-center">Sejam bem-vindos</h3>
-            <p class="text-justify texto">Nessa página poderão encontrar as pesquisas realizadas sobre as Indústrias Sustentáveis e os ramos do Desenvolvimento Sustentável. Poderão visualizar as empresas que atualmente trabalham com a sustentabilidade, além de, estar a par de todas as notícias no ramo da sustentabilidade. Então venha conhecer mais!</p>
-            <h3 class="text-center">Empresas Participantes das Indústrias Sustentáveis</h3>
-            <ul class="card-text texto">
-                <li><strong>Natura:</strong> trabalha com a preservação da Amazônia</li>
-                <li><strong>Braskem:</strong> trabalha com as inovações sustentáveis</li>
-                <li><strong>Alcoa:</strong> trabalha com a diminuição de emissões gases no efeito estufa</li>
-                <li><strong>Embraco:</strong> trabalha com a reciclagem</li>
-                <li><strong>Whirlpool:</strong> trabalha com a redução de desperdícios de produtos durante sua produção</li>
-                <li><strong>Ecorodovias:</strong> produzem rodovias visando a sustentabilidade</li>
-            </ul>   
-            
-            <h3>O quanto as pessoas conhecem sobre Desenvolvimento Sustentável?</h3>               
-            <div class="row texto">
-                <p class="col-md-5 text-justify">Para uma empresa com uma fábrica que deseja utilizar energia limpa para a diminuição de admissão dos gases do efeito estufa, é mais viável utilizar:</p>
-                <canvas class="col-md-7" id="chart02"></canvas>
-                <div class="col-lg-8 pt-5">
-                    <p class="text-center">Qual tipo de resíduos você acredita que tem uma produção elevada?</p>
-                    <canvas id="chart03"></canvas>
-                </div>
+        <div class="nt-m">
+            <div class="align-items-center justify-content-center d-flex titulo">
+                <h1 class="font-girassol">Notícias</h1>
+                <img class="img-blur" src="assets/img/industria.jpg">
+            </div>
+            <div class="custom-control nt-m custom-switch" id="dark-switch">
+                <input type="checkbox" class="custom-control-input" id="customSwitch1">
+                <label class="custom-control-label" for="customSwitch1">DarkMode</label>
             </div>
             
-
-            <h3 class="text-center">Impacto da Economia Circular no Brasil</h3>
-
-            <div class="row text-justify texto">
-                <div class="col-lg-6">
-                    <p>A Economia Circular é uma forma de incentivar as indústrias a construção do reuso dos materiais e assim, proporcionando as pessoas um gasto bem menor e, poupando a natureza de estoque de matérias-primas. Contudo, como isso tem ocorrido, principalmente, no Brasil?</p>
-                <p>No Brasil, juntamente, com as Indústrias Sustentáveis, tem-se implementado o reuso dos materiais e, desse modo, as próprias indústrias tem levado essas novas informações as escolas, aos cursos técnicos e, em reuniões públicas, com o objetivo de incentivar para que possam descartar em lugares corretos, para assim, reiniciar o ciclo.</p>
+            <div class="container titulo font-frank" id="conteudo">
+                <h3 class="text-center">Sejam bem-vindos</h3>
+                <p class="text-justify texto">Nessa página poderão encontrar as pesquisas realizadas sobre as Indústrias Sustentáveis e os ramos do Desenvolvimento Sustentável. Poderão visualizar as empresas que atualmente trabalham com a sustentabilidade, além de, estar a par de todas as notícias no ramo da sustentabilidade. Então venha conhecer mais!</p>
+                <h3 class="text-center">Empresas Participantes das Indústrias Sustentáveis</h3>
+                <ul class="card-text texto">
+                    <li><strong>Natura:</strong> trabalha com a preservação da Amazônia</li>
+                    <li><strong>Braskem:</strong> trabalha com as inovações sustentáveis</li>
+                    <li><strong>Alcoa:</strong> trabalha com a diminuição de emissões gases no efeito estufa</li>
+                    <li><strong>Embraco:</strong> trabalha com a reciclagem</li>
+                    <li><strong>Whirlpool:</strong> trabalha com a redução de desperdícios de produtos durante sua produção</li>
+                    <li><strong>Ecorodovias:</strong> produzem rodovias visando a sustentabilidade</li>
+                </ul>   
+                
+                <h3>O quanto as pessoas conhecem sobre Desenvolvimento Sustentável?</h3>               
+                <div class="row texto">
+                    <p class="col-md-5 text-justify">Para uma empresa com uma fábrica que deseja utilizar energia limpa para a diminuição de admissão dos gases do efeito estufa, é mais viável utilizar:</p>
+                    <canvas class="col-md-7" id="chart02"></canvas>
+                    <div class="col-lg-8 pt-5">
+                        <p class="text-center">Qual tipo de resíduos você acredita que tem uma produção elevada?</p>
+                        <canvas id="chart03"></canvas>
+                    </div>
                 </div>
-                <div class="col-lg-6">
-                    <p>O que você entende como industrias sustentáveis e economia circular?</p>
-                    <canvas id="chart04" height="200px"></canvas>
+                
+    
+                <h3 class="text-center">Impacto da Economia Circular no Brasil</h3>
+    
+                <div class="row text-justify texto">
+                    <div class="col-lg-6">
+                        <p>A Economia Circular é uma forma de incentivar as indústrias a construção do reuso dos materiais e assim, proporcionando as pessoas um gasto bem menor e, poupando a natureza de estoque de matérias-primas. Contudo, como isso tem ocorrido, principalmente, no Brasil?</p>
+                    <p>No Brasil, juntamente, com as Indústrias Sustentáveis, tem-se implementado o reuso dos materiais e, desse modo, as próprias indústrias tem levado essas novas informações as escolas, aos cursos técnicos e, em reuniões públicas, com o objetivo de incentivar para que possam descartar em lugares corretos, para assim, reiniciar o ciclo.</p>
+                    </div>
+                    <div class="col-lg-6">
+                        <p>O que você entende como industrias sustentáveis e economia circular?</p>
+                        <canvas id="chart04" height="200px"></canvas>
+                    </div>
                 </div>
             </div>
+    
+            <nav class="p-4" aria-label="Page navigation example">
+                <ul class="nav-pills pagination justify-content-center">
+                  <li class="page-item"><a class="page-link" href="javascript:history.back()">Anterior</a></li>
+                  <li class="page-item"><a class="page-link" href="noticias.html">1</a></li>
+                  <li class="page-item"><a class="page-link" href="noticias02.html">2</a></li>
+                  <li class="page-item"><a class="page-link" href="#">3</a></li>
+                  <li class="page-item"><a class="page-link" href="#">Próximo</a></li>
+                </ul>
+            </nav>
         </div>
-
-        <nav class="p-4" aria-label="Page navigation example">
-            <ul class="nav-pills pagination justify-content-center">
-              <li class="page-item"><a class="page-link" href="javascript:history.back()">Anterior</a></li>
-              <li class="page-item"><a class="page-link" href="noticias.html">1</a></li>
-              <li class="page-item"><a class="page-link" href="noticias02.html">2</a></li>
-              <li class="page-item"><a class="page-link" href="#">3</a></li>
-              <li class="page-item"><a class="page-link" href="#">Próximo</a></li>
-            </ul>
-        </nav>
 
         <!-- Rodapé -->
         <div id="web-bottom"></div>
@@ -140,7 +146,6 @@
                         xAxes: [{
                             ticks: {
                                 fontSize: 16,
-                                fontColor: 'black',
                             },
                             gridLines: {
                                 tickMarkLength: 14,
@@ -149,7 +154,6 @@
                         yAxes: [{
                             ticks: {
                                 fontSize: 16,
-                                fontColor: 'black',
                                 stepSize: 10,
                             },
                             gridLines: {
@@ -160,7 +164,6 @@
                     legend: {
                             labels: {
                                 fontSize: 16,
-                                fontColor: 'black'
                             }
                         }
                 }
@@ -196,7 +199,6 @@
                     legend: {
                             labels: {
                                 fontSize: 14,
-                                fontColor: 'black'
                             }
                         }
                 }
@@ -235,7 +237,6 @@
                     legend: {
                             labels: {
                                 fontSize: 14,
-                                fontColor: 'black',
                             }
                         }
                 }

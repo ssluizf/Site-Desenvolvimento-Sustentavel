@@ -19,10 +19,11 @@ function gerarElementos() {
             </form>
         </div>
         </nav>
-    </div>`;
+    </div>
+    `;
 
     const rodape = `
-    <div class="row justify-content-between align-items-end text night-mode" id="rodape">
+    <div class="row justify-content-between align-items-end text nt-m" id="rodape">
         <p class="card-text">Copyright © 2020 Ind. Safe, Blog</p>
         <div>
             <div class="cl-4" id="contato">
@@ -41,7 +42,7 @@ function gerarElementos() {
                     <li><a href="https://www.youtube.com/?gl=BR&hl=pt"><img src="assets/img/ytb.png"></a></li>
                 </ul> 
             </div>  
-        </div>    
+        </div>  
     </div>`;
     
     document.getElementById("web-top").outerHTML += cabecalho;
@@ -70,3 +71,20 @@ function eventosPesquisa() {
 }
 
 eventosPesquisa();
+
+document.getElementById("customSwitch1").addEventListener("change", function() {
+    const elems = document.getElementsByClassName('nt-m');
+    let color = ''
+
+    if(this.checked) {
+        for (var i = 0; i < elems.length; i++) {
+            elems[i].classList.add('night-mode')
+            color = '#e1f5fe'
+        }
+    } else {
+        for (var i = 0; i < elems.length; i++) {
+            elems[i].classList.remove('night-mode')
+            color = 'black'
+        }
+    }
+})
