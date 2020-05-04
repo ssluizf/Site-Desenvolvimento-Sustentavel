@@ -38,17 +38,33 @@
                 <label class="custom-control-label" for="customSwitch1">DarkMode</label>
             </div>
             <div class="container titulo font-frank" id="conteudo">
-                <div class="texto">
-                    <p>Você acredita que toda matéria-prima é infinita?</p>
-                    <canvas id="chart05"></canvas>
-                </div>
+                <h3>O Rompimento da Barragem em Brumadinho: Causa sérios danos ao meio ambiente e impacto na produção das indústrias mineradoras.</h3>
+                <p class="texto">Dados do IBGE revelam que no em 2019 o setor de produção industrial recuou 1,1%. Em decorrência, ao Rompimento da Barragem de Brumadinho, o setor extrativo apresentou grande queda nos Estados de Minas Gerais (-25,3%) e Espírito Santo (-21,1%), marcando negativamente o setor no ano do acidente. Veja uma pergunta da nossa enquete sobre o tema: </p>
                 <div class="texto">
                     <p>Se você fosse encarregado de gerir uma nova gestão em sua indústria, para ingressa-la no quadro do “Desenvolvimento Sustentável”. Qual medida imediata você tomaria?</p>
-                    <canvas id="chart06"></canvas>
+                    <div class="row">
+                        <canvas class="col-lg-8" id="chart06"></canvas>
+                        <div class="col-lg-4 text-justify">
+                            <p><strong>A: </strong>Aumentaria o monitoramento sobre a vida útil dos aparelhos e seu gasto energético</p>
+                            <p><strong>B: </strong>Conscientizaria suas redes sobre a importância do desenvolvimento sustentável nas indústrias</p>
+                            <p><strong>C: </strong>Investiria na separação dos resíduos/lixos industriais, para promover o reaproveitamento futuro</p>
+                            <p><strong>D: </strong>Criaria um sistema de reutilização da água utilizada nos setores da indústria</p>
+                        </div>
+                    </div>
                 </div>
-                <h3>O Rompimento da Barragem em Brumadinho: Causa sérios danos ao meio ambiente e impacto na produção das indústrias mineradoras.</h3>
-                <p class="texto">Dados do IBGE revelam que no em 2019 o setor de produção industrial recuou 1,1%. Em decorrência, ao Rompimento da Barragem de Brumadinho, o setor extrativo apresentou grande queda nos Estados de Minas Gerais (-25,3%) e Espírito Santo (-21,1%), marcando negativamente o setor no ano do acidente.</p>
-                <p class="texto">A barragem continha rejeitos de uma mina da empresa Vale, com seu rompimento instalações da mina e casas vizinhas foram cobertas por um rio de lama em questões de segundos. A contagem de vítimas revela 224 mortos e 69 desaparecidos (IBGE), os municípios de Brumadinho e Rio Paraopeba foram afetados pelos rejeitos espalhados. Os danos ao meio ambiente causados, podem ser devidamente relacionados ao descaso a fiscalização e verbas públicas a preservação do meio ambiente, que estavam cada vez mais crescentes, a exemplo, o Ministério do Meio Ambiente estava em processo de extinção, na medida, que no período o atual presidente Jair Bolsonaro planejava a fusão dos Ministérios do Meio Ambiente e da Agricultura.</p>    
+                <p class="texto text-justify">A barragem continha rejeitos de uma mina da empresa Vale, com seu rompimento instalações da mina e casas vizinhas foram cobertas por um rio de lama em questões de segundos. A contagem de vítimas revela 224 mortos e 69 desaparecidos (IBGE), os municípios de Brumadinho e Rio Paraopeba foram afetados pelos rejeitos espalhados. Os danos ao meio ambiente causados, podem ser devidamente relacionados ao descaso a fiscalização e verbas públicas a preservação do meio ambiente, que estavam cada vez mais crescentes, a exemplo, o Ministério do Meio Ambiente estava em processo de extinção, na medida, que no período o atual presidente Jair Bolsonaro planejava a fusão dos Ministérios do Meio Ambiente e da Agricultura. Veja uma pergunta da nossa enquete sobre o tema: </p>    
+                <div class="texto">
+                    <p>Qual tipo de resíduos você acredita que tem uma produção elevada?</p>
+                    <div class="row">
+                        <canvas class="col-lg-7" id="chart05"></canvas>
+                        <div class="col-lg-5 text-justify pt-4">
+                            <p>Resíduos Indústrias: <strong>32</strong></p>
+                            <p>Resíduos Domésticos: <strong>7</strong></p>
+                            <p>Ambas tem uma produção elevada: <strong>61</strong></p>
+                            <p>Ambas tem uma produção baixa: <strong>1</strong></p>
+                        </div>
+                    </div>
+                </div>
             </div>
             <nav class="p-4" aria-label="Page navigation example">
                 <ul class="nav-pills pagination justify-content-center">
@@ -77,45 +93,52 @@
         <script src="assets/js/index.js"></script>
 
         <!-- ChartJS-->
-        <script>
+        <script> 
+            function fontBase(w) {
+
+                if(window.innerWidth <= 800) {
+                    w -= 10
+                }
+
+                return w;
+            }
 
             const ctx5 = document.getElementById('chart05').getContext('2d');
-            const chart5 = new Chart(ctx5, {
+            const chart5 = new Chart(ctx5,  {
 
                 type: 'pie',
 
                 data: {
                     datasets: [{
-                        label: 'Você acredita que toda matéria-prima é infinita?',
+                        label: 'Qual tipo de resíduos você acredita que tem uma produção elevada?',
                         backgroundColor: [
-                            'rgb(250, 127, 114)',
-                            'rgb(133, 255, 133)',
-                            'rgb(102, 0, 255)',
-                            'rgb(245, 245, 200)',
+                            '#4eac12',
+                            '#cc2900',
+                            '#007ecc',
+                            '#cc8900',
                         ],
-                        borderColor: 'rgb(246, 246, 246)',
-                        borderWidth: 4,
-                        data: [43, 3, 42, 13],
+                        borderColor: 'rgb(0, 0, 0, 0.8)',
+                        borderWidth: 2,
+                        data: [32, 7, 61, 1],
                     },],
                     labels: [
-                        'Não, só algumas',
-                        'Sim',
-                        'Todas são finitas',
-                        'Não sei', 
+                        ' Resíduos Indústrias',
+                        ' Resíduos Domésticos',
+                        ' Ambas tem uma produção elevada',
+                        ' Ambas tem uma produção baixa', 
                     ],
                 },
 
                 options: {
-                    xAxes: [{
-                            display: false,
-                        }],
+                    tooltips: {
+                        bodyFontSize: fontBase(25),
+                        bodyAlign: 'center',	
+                    },
                     legend: {
-                            labels: {
-                                fontSize: 14,
-                            }
+                            display: false,
                         }
                 }
-            });
+                });
 
             const ctx6 = document.getElementById('chart06').getContext('2d');
             const chart6 = new Chart(ctx6, {
@@ -136,21 +159,20 @@
                         data: [12, 11, 44, 34],
                     },],
                     labels: [
-                        'Aumentaria o monitoramento sobre a vida útil dos aparelhos e seu gasto energético',
-                        'Conscientizaria suas redes sobre a importância do desenvolvimento sustentável nas indústrias',
-                        'Investiria na separação dos resíduos/lixos industriais, para promover o reaproveitamento futuro',
-                        'Criaria um sistema de reutilização da água utilizada nos setores da indústria', 
+                        ' A',
+                        ' B',
+                        ' C',
+                        ' D', 
                     ],
                 },
 
                 options: {
-                    xAxes: [{
-                            display: false,
-                        }],
+                    tooltips: {
+                        bodyFontSize: fontBase(30),
+                        bodyAlign: 'center',	
+                    },
                     legend: {
-                            labels: {
-                                fontSize: 16,
-                            }
+                            display: false,
                         }
                 }
             });

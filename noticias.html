@@ -55,7 +55,7 @@
                     <p class="col-md-5 text-justify">Para uma empresa com uma fábrica que deseja utilizar energia limpa para a diminuição de admissão dos gases do efeito estufa, é mais viável utilizar:</p>
                     <canvas class="col-md-7" id="chart02"></canvas>
                     <div class="col-lg-8 pt-5">
-                        <p class="text-center">Qual tipo de resíduos você acredita que tem uma produção elevada?</p>
+                        <p>Você acredita que toda matéria-prima é infinita?</p>
                         <canvas id="chart03"></canvas>
                     </div>
                 </div>
@@ -169,41 +169,42 @@
             });
 
             const ctx3 = document.getElementById('chart03').getContext('2d');
-            const chart3 = new Chart(ctx3, {
+            const chart3 = new Chart(ctx3,{
 
                 type: 'pie',
 
                 data: {
                     datasets: [{
-                        label: 'Qual tipo de resíduos você acredita que tem uma produção elevada?',
+                        label: 'Você acredita que toda matéria-prima é infinita?',
                         backgroundColor: [
-                            '#4eac12',
-                            '#cc2900',
-                            '#007ecc',
-                            '#cc8900',
+                            'rgb(250, 127, 114)',
+                            'rgb(133, 255, 133)',
+                            'rgb(102, 0, 255)',
+                            'rgb(245, 245, 200)',
                         ],
-                        borderColor: 'rgb(0, 0, 0, 0.8)',
-                        borderWidth: 2,
-                        data: [32, 7, 61, 1],
+                        borderColor: 'rgb(246, 246, 246)',
+                        borderWidth: 4,
+                        data: [43, 3, 42, 13],
                     },],
                     labels: [
-                        'Resíduos Indústrias',
-                        'Resíduos Domésticos',
-                        'Ambas tem uma produção elevada',
-                        'Ambas tem uma produção baixa', 
+                        'Não, só algumas',
+                        'Sim',
+                        'Todas são finitas',
+                        'Não sei', 
                     ],
                 },
 
                 options: {
+                    xAxes: [{
+                            display: false,
+                        }],
                     legend: {
                             labels: {
-                                align: 'center',
-                                boxWidth: 20,
                                 fontSize: 14,
                             }
                         }
                 }
-            });
+                });
 
             const ctx4 = document.getElementById('chart04').getContext('2d');
             const chart4 = new Chart(ctx4, {
