@@ -19,6 +19,9 @@
         <!-- ChartJS -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.css"></link>
 
+        <!-- Materialize Icons-->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css2?family=Girassol&family=Pacifico&family=Sanchez&family=Frank+Ruhl+Libre:wght@300&display=swap" rel="stylesheet">
 
@@ -29,10 +32,6 @@
         <div class="align-items-center justify-content-center titulo" id="web-top">
             <h1 class="font-girassol">Indústria Sustentável</h1>
             <img src="assets/img/mao.jpeg" class="img-blur"></img>
-        </div>
-        <div class="custom-control custom-switch nt-m" id="dark-switch">
-            <input type="checkbox" class="custom-control-input" id="customSwitch1">
-            <label class="custom-control-label" for="customSwitch1">DarkMode</label>
         </div>
 
         <!-- Conteúdo Principal -->
@@ -49,7 +48,7 @@
                                 <p class="card-text">Em relação ao aquecimento global, na sua opinião o agente de maior responsabilidade é:</p>
                                 <canvas id="chart01"></canvas>
                             </div>
-                            <div class="card-header text-center"><a href="noticias.html">LER MAIS</a></div>
+                            <div class="card-header text-center"><a href="noticias.html" onclick=darkSwitchNav(event)>LER MAIS</a></div>
                         </div>
                         <div class="card">
                             <div class="card-body">
@@ -58,12 +57,12 @@
                                 <p class="card-text">Por terem vistos e, até mesmo, causado diversos problemas ou desastres ambientais, muitas indústrias pensaram melhor da maneira como poderiam produzir, como poderiam continuar fazendo o que fazia sem prejudicar a nossa principal fonte de vida. Sendo assim, Indústrias/Empresas a Ecorodovias começaram a agir para frente, pensando no bem de todos. Muitas das estradas nos quais passamos todos os dias, algumas delas, foram construídas de maneira ecológica, de maneira que não afete ninguém.</p>
                                 <p class="card-text">Participe dessa campanha "Ajude você mesmo". Sejam como as indústrias sustentáveis: Reuse, pense na natureza, utilize roupas que não agridem a natureza. Venha, faça a diferença.</p>
                             </div>
-                            <div class="card-header text-center"><a href="noticias.html">LER MAIS</a></div>
+                            <div class="card-header text-center"><a href="noticias.html" onclick=darkSwitchNav(event)>LER MAIS</a></div>
                         </div>
                     </div>
                     <div class="col-lg-4">    
                         <div class="card">
-                            <div class="card-header"><a href="noticias.html">CONHECA MAIS</a></div>
+                            <div class="card-header"><a href="noticias.html" onclick=darkSwitchNav(event)>CONHECA MAIS</a></div>
                             <div class="card-body">
                                 <h5 class="card-title">Quais são os outros ramos do Desenvolvimento Sustentável?</h5>
                                 <p class="card-text">Você já ouviu falar em Economia Circular, Ecorodovias, Diminuição nas Emissiões de Gases no Efeito Estufa? Venha saber mais. Fique por aqui!</p>

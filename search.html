@@ -27,10 +27,6 @@
         
         <!-- Cabeçalho -->
         <div class="align-items-center justify-content-center titulo" id="web-top"></div>
-        <div class="custom-control nt-m custom-switch" id="dark-switch">
-            <input type="checkbox" class="custom-control-input" id="customSwitch1">
-            <label class="custom-control-label" for="customSwitch1">DarkMode</label>
-        </div>
 
         <!-- Conteúdo Principal -->
         <div class="nt-m">
@@ -94,37 +90,19 @@
                     }
                 }
             }
-        }
+            }
 
-        function queryString(parameter) {  
-            var loc = location.search.substring(1, location.search.length);   
-            var param_value = false;   
-            var params = loc.split("&");   
-            for (i=0; i<params.length;i++) {   
-                param_name = params[i].substring(0,params[i].indexOf('='));   
-                if (param_name == parameter) {                                          
-                    param_value = params[i].substring(params[i].indexOf('=')+1)   
-                }   
-            }   
-            if (param_value) {   
-                return param_value;   
-            }   
-            else {   
-                return undefined;   
-            }   
-        }
-
-        let pages = ["Home", "Notícias", "Quem Somos?"]
-        let nav = ["index.html", "noticias.html", "sobre.html"]
-        let text = [
+            let pages = ["Home", "Notícias", "Quem Somos?"]
+            let nav = ["index.html", "noticias.html", "sobre.html"]
+            let text = [
             "Venha visitar nossa página inicial",
             "As últimas notícias sobre a indústria e o Desenvolvimento Sustentável",
             "Um pouco da nossa história",
-        ]
+            ]
 
-        queryString("inputValue") != undefined ? document.getElementById("input").value = queryString("inputValue") : ""
+            queryString("inputValue") != undefined ? document.getElementById("input").value = queryString("inputValue") : ""
 
-        search(document.getElementById("input"), pages, text, nav);
+            search(document.getElementById("input"), pages, text, nav);
         </script>
 
     </body>

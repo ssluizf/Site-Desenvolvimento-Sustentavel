@@ -9,7 +9,7 @@ body {
     height: 100%;
 }
 
-h1, img, #cabecalho, #rodape, .card-header{
+h1, img, #cabecalho, #rodape, .card-header, #dark-switch{
     -webkit-touch-callout: none; 
     -webkit-user-select: none; 
     -khtml-user-select: none; 
