@@ -125,11 +125,37 @@ function darkSwitchEvent() {
 
 darkSwitchEvent()
 
-function fontBase(w) {
+function chartColor(chart) {
+    let color = ""
 
-    if(window.innerWidth <= 800) {
-        w -= 10
+    if ( document.getElementById("customSwitch1").checked ) {
+        color = "#e1f5fe"
+    } else {
+        color = "black"
     }
 
-    return w;
+    chart.options = {
+        scales: {
+            xAxes: [{
+                ticks: {
+                    fontSize: 16,
+                    fontColor: color,
+                },
+            }],
+            yAxes: [{
+                ticks: {
+                    fontSize: 16,
+                    fontColor: color,
+                    stepSize: 10,
+                },
+            }],
+        },
+        tooltips: {
+            titleFontSize: 16,
+            bodyFontSize: 16,
+        },
+        legend: {
+            display: false,
+            }
+    }
 }

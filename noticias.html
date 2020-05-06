@@ -46,26 +46,47 @@
                 </ul>   
                 
                 <h3>O quanto as pessoas conhecem sobre Desenvolvimento Sustentável?</h3>               
-                <div class="row texto">
-                    <p class="col-md-5 text-justify">Para uma empresa com uma fábrica que deseja utilizar energia limpa para a diminuição de admissão dos gases do efeito estufa, é mais viável utilizar:</p>
-                    <canvas class="col-md-7" id="chart02"></canvas>
-                    <div class="col-lg-8 pt-5">
-                        <p>Você acredita que toda matéria-prima é infinita?</p>
-                        <canvas id="chart03"></canvas>
+                <div class="texto">
+                    <p>Em relação ao aquecimento global, na sua opinião o agente de maior responsabilidade é:</p>
+                    <div class="row">
+                        <canvas class="col-lg-7" id="chart02"></canvas>
+                        <div class="col-lg-5 text-justify pt-4">
+                            <p>Desmatamento descontrolado: <strong>37</strong></p>
+                            <p>Grande circulação de veículos e maior emissão de gases do efeito estufa: <strong>28</strong></p>
+                            <p>Emissão de gases pelas grandes indústrias: <strong>30</strong></p>
+                            <p>A mudança de temperatura natural do planeta Terra: <strong>6</strong></p>
+                        </div>
                     </div>
                 </div>
-                
+
+                <div class="texto">
+                    <p>Você acredita que toda matéria-prima é infinita?</p>
+                    <div class="row">
+                        <canvas class="col-lg-7" id="chart03"></canvas>
+                        <div class="col-lg-5 text-justify pt-4">
+                            <p>Não, só algumas: <strong>43</strong></p>
+                            <p>Sim: <strong>3</strong></p>
+                            <p>Todas são finitas: <strong>42</strong></p>
+                            <p>Não sei: <strong>13</strong></p>
+                        </div>
+                    </div>
+                </div>
     
                 <h3 class="text-center">Impacto da Economia Circular no Brasil</h3>
-    
-                <div class="row text-justify texto">
+                <div class="row text-justify justify-content-end texto">
                     <div class="col-lg-6">
                         <p>A Economia Circular é uma forma de incentivar as indústrias a construção do reuso dos materiais e assim, proporcionando as pessoas um gasto bem menor e, poupando a natureza de estoque de matérias-primas. Contudo, como isso tem ocorrido, principalmente, no Brasil?</p>
-                    <p>No Brasil, juntamente, com as Indústrias Sustentáveis, tem-se implementado o reuso dos materiais e, desse modo, as próprias indústrias tem levado essas novas informações as escolas, aos cursos técnicos e, em reuniões públicas, com o objetivo de incentivar para que possam descartar em lugares corretos, para assim, reiniciar o ciclo.</p>
+                        <p>No Brasil, juntamente, com as Indústrias Sustentáveis, tem-se implementado o reuso dos materiais e, desse modo, as próprias indústrias tem levado essas novas informações as escolas, aos cursos técnicos e, em reuniões públicas, com o objetivo de incentivar para que possam descartar em lugares corretos, para assim, reiniciar o ciclo.</p>
                     </div>
                     <div class="col-lg-6">
                         <p>O que você entende como industrias sustentáveis e economia circular?</p>
-                        <canvas id="chart04" height="200px"></canvas>
+                        <canvas class="" id="chart04"></canvas>
+                    </div>
+                    <div class="col-lg-5 pt-4">
+                        <p>Nunca ouvi falar: <strong>( A )</strong></p>
+                        <p>Áreas diferentes, mas que se correlacionam no final: <strong>( B )</strong></p>
+                        <p>Economia circular não se complementa com as Indústrias Sustentáveis: <strong>( C )</strong></p>
+                        <p>Já ouvi falar, mas nunca pesquisei: <strong>( D )</strong></p>
                     </div>
                 </div>
             </div>
@@ -101,65 +122,47 @@
             const ctx2 = document.getElementById('chart02').getContext('2d');
             const chart2 = new Chart(ctx2, {
 
-                type: 'bar',
+            type: 'bar',
 
-                data: {
-                    datasets: [{
-                        label: 'Pesquisa Desenvolvimento Sustentável',
-                        backgroundColor: [
-                        'rgb(0, 255, 100, 0.4)',
-                        'rgb(255, 0, 50, 0.4)',
-                        'rgb(0, 100, 255, 0.4)',
-                        'rgb(255, 200, 0, 0.4)',
-                        ],
-                        borderColor: [
-                        'rgb(0, 255, 100, 0.5)',
-                        'rgb(255, 0, 100, 0.5)',
-                        'rgb(0, 100, 255, 0.5)',
-                        'rgb(255, 100, 0, 0.5)',
-                        ],
-                        borderWidth: 3,
-                        hoverBackgroundColor: [
-                        'rgb(0, 255, 50, 0.5)',
-                        'rgb(255, 0, 0, 0.5)',
-                        'rgb(0, 50, 255, 0.5)',
-                        'rgb(255, 100, 0, 0.5)',
-                        ],
-                        data: [28, 67, 5, 1],
-                    }],
-                    labels: [
-                        'Eólica',
-                        'Solar',
-                        'Hídrica',
-                        'Nuclear',
+            data: {
+                datasets: [{
+                    label: ' Pesquisa Desenvolvimento Sustentável',
+                    backgroundColor: [
+                        'rgb(48, 110, 50, 0.8)',
+                        'rgb(204, 122, 0, 0.8)',
+                        'rgb(1, 87, 155, 0.7)',
+                        'rgb(169, 151, 0, 0.8)',
                     ],
-                },
+                    hoverBackgroundColor: [
+                        'rgb(48, 110, 50)',
+                        'rgb(204, 122, 0, 0.9)',
+                        'rgb(1, 87, 155)',
+                        'rgb(169, 151, 0)',
+                    ],
+                    borderColor: 'rgb(0, 0, 0, 0.1)',
+                    borderWidth: 3,
+                    borderSkipped: "bottom",
+                    hoverBorderWidth: 4,
+                    data: [37, 28, 30, 6],
+                },],
+                labels: ['Desmatamento descontrolado', 'Grande circulação de veículos e maior emissão de gases do efeito estufa', 'Emissão de gases pelas grandes indústrias', 'A mudança de temperatura natural do planeta Terra'],
+            },
 
-                options: {
-                    scales: {
-                        xAxes: [{
-                            ticks: {
-                                fontSize: 16,
-                            },
-                            gridLines: {
-                                tickMarkLength: 14,
-                            }
-                        }],
-                        yAxes: [{
-                            ticks: {
-                                fontSize: 16,
-                                stepSize: 10,
-                            },
-                            gridLines: {
-                                tickMarkLength: 12,
-                            }
-                        }],
-                    },
-                    legend: {
-                            labels: {
-                                fontSize: 16,
-                            }
+            options: {
+                scales: {
+                    xAxes: [{
+                        display: false,
+                    }],
+                },
+                tooltips: {
+                    bodyFontSize: 14,
+                    titleFontSize: 14,
+                },
+                legend: {
+                    labels: {
+                        fontSize: 16,
                         }
+                    }
                 }
             });
 
@@ -182,10 +185,10 @@
                         data: [43, 3, 42, 13],
                     },],
                     labels: [
-                        'Não, só algumas',
-                        'Sim',
-                        'Todas são finitas',
-                        'Não sei', 
+                        ' Não, só algumas',
+                        ' Sim',
+                        ' Todas são finitas',
+                        ' Não sei', 
                     ],
                 },
 
@@ -193,10 +196,11 @@
                     xAxes: [{
                             display: false,
                         }],
+                    tooltips: {
+                        bodyFontSize: 18,
+                    },
                     legend: {
-                            labels: {
-                                fontSize: 14,
-                            }
+                        display: false,
                         }
                 }
                 });
@@ -220,21 +224,19 @@
                         data: [12, 24, 4, 60],
                     },],
                     labels: [
-                        'Nunca ouvi falar',
-                        'Áreas diferentes, mas que se correlacionam no final',
-                        'Economia circular não se complementa com as Indústrias Sustentáveis',
-                        'Já ouvi falar, mas nunca pesquisei', 
+                        ' A',
+                        ' B',
+                        ' C',
+                        ' D', 
                     ],
                 },
 
                 options: {
-                    xAxes: [{
-                            display: false,
-                        }],
+                    tooltips: {
+                        bodyFontSize: 25,
+                    },
                     legend: {
-                            labels: {
-                                fontSize: 14,
-                            }
+                        display: false,
                         }
                 }
             });
