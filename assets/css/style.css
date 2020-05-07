@@ -238,6 +238,9 @@ a:hover {
     .titulo h1 {
         font-size: 2.4em;
     }
+    .titulo h2 {
+        font-size: 2em;
+    }
     .titulo h3 {
         font-size: 1.8em;
     }
