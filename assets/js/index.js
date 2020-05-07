@@ -120,6 +120,12 @@ function darkSwitchEvent() {
     queryString("inputCheck") == 'true' ? document.getElementById("customSwitch1").checked = true : ""
 
     window.addEventListener("load", darkSwitch)
+    window.addEventListener("keydown", (e) => {
+        if (e.which == 116) {
+            e.preventDefault()
+            window.location = "?inputCheck=" + document.getElementById("customSwitch1").checked
+        }
+    })
     document.getElementById("customSwitch1").addEventListener("change", darkSwitch)
 }
 

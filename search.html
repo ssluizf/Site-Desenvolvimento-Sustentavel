@@ -26,14 +26,16 @@
     <body>
         
         <!-- Cabeçalho -->
-        <div class="align-items-center justify-content-center titulo" id="web-top"></div>
+        <div id="web-top"></div>
 
         <!-- Conteúdo Principal -->
         <div class="nt-m">
             <div class="container" id="conteudo">
                 <div class="titulo font-sanchez" id="search-page">
-                    <h2 class="p-0">Procurando alguma coisa?</h2>
-                    <p class="texto text-muted ml-4">Use nosso dispositivo de busca ou navegue nos botões acima.</p>
+                    <div class="collapse show" id="searching">
+                        <h2 class="p-0">Procurando alguma coisa?</h2>
+                        <p class="texto text-muted ml-4">Use nosso dispositivo de busca ou navegue nos botões acima.</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -53,6 +55,9 @@
         <!-- Scripts -->
         <script src="assets/js/index.js"></script>
         <script>
+
+        document.getElementById("dark-switch").classList = "d-none";
+
         function search(inp, pages, text, nav) {
 
             if (inp.value) {
@@ -67,6 +72,7 @@
 
                 if (!val) { return false;}
                 closeAllLists()
+                closeAllLists()
                 createSearchItems(a, i, val)
             })
 
@@ -74,11 +80,20 @@
                 for (i = 0; i < pages.length; i++) {
                     if (pages[i].substr(0, val.length).toUpperCase() == val.toUpperCase() || nav[i].substr(0, val.length).toUpperCase() == val.toUpperCase()) {
                         a = document.createElement("DIV");
-                        a.innerHTML = "<a href="+ nav[i] +"><h2 class='p-0'>" + pages[i] + "</h2></a>"+
+
+                        a.innerHTML = "<a href="+ nav[i] + "?inputCheck=" + document.getElementById("customSwitch1").checked +
+                        "><h2 class='p-0'>" + pages[i] + "</h2></a>"+
                         "<p class='texto text-muted ml-4'>"+ text[i] +"</p>" ;
+
                         a.setAttribute("class", "search-item");
                         document.getElementById("search-page").appendChild(a);
                     }
+                }
+                
+                if (document.getElementsByClassName("search-item").length == 0) {
+                    document.getElementById("searching").classList.add("show");
+                } else {
+                    document.getElementById("searching").classList.remove("show");
                 }
             }
 
@@ -92,11 +107,12 @@
             }
             }
 
-            let pages = ["Home", "Notícias", "Quem Somos?"]
-            let nav = ["index.html", "noticias.html", "sobre.html"]
+            let pages = ["Home", "Notícias", "Brumadinho", "Quem Somos?"]
+            let nav = ["index.html", "noticias.html",  "noticias02.html", "sobre.html"]
             let text = [
             "Venha visitar nossa página inicial",
-            "As últimas notícias sobre a indústria e o Desenvolvimento Sustentável",
+            "As últimas notícias sobre a Indústria e o Desenvolvimento Sustentável",
+            "Os impactos do rompimento da Barragem de Brumadinho",
             "Um pouco da nossa história",
             ]
 
