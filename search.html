@@ -68,9 +68,10 @@
             }
 
             inp.addEventListener("input", function(e) {
-                let a, i, val = this.value;
+                let a, i, val = inp.value.trim();
 
                 if (!val) { return false;}
+                
                 closeAllLists()
                 closeAllLists()
                 createSearchItems(a, i, val)
@@ -116,7 +117,7 @@
             "Um pouco da nossa história",
             ]
 
-            queryString("inputValue") != undefined ? document.getElementById("input").value = queryString("inputValue") : ""
+            queryString("inputValue") != undefined ? document.getElementById("input").value = queryString("inputValue").replace(/\+/g, ' ').trim() : ""
 
             search(document.getElementById("input"), pages, text, nav);
         </script>

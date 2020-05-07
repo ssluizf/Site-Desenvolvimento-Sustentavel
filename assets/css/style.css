@@ -9,12 +9,7 @@ body {
     height: 100%;
 }
 
-h1, img, #cabecalho, #rodape, .card-header, #dark-switch{
-    -webkit-touch-callout: none; 
-    -webkit-user-select: none; 
-    -khtml-user-select: none; 
-    -moz-user-select: none; 
-    -ms-user-select: none;
+h1, img, nav, #rodape, .card-header, #dark-switch{
     user-select: none;
 }
 
@@ -152,12 +147,13 @@ a:hover {
 
 #rodape {
     background-color: #607d8b;
-    padding: 40px 10px 20px 20px;
+    padding: 40px 20px 20px 40px;
     box-shadow: 2px 0px 10px #000;
 }
 
-#rodape  p {
+#rodape p {
     font-weight: bold;
+    padding-right: 20px;
     font-size: 1.2em;
 }
 
@@ -176,10 +172,6 @@ a:hover {
 
 #redes-sociais a {
     background-color: transparent !important;
-}
-
-#contato > p {
-    padding-right: 25px;
 }
 
 #contato {
@@ -227,5 +219,29 @@ a:hover {
 
     #search-box:hover #search-button {
         display: block;
+    }
+}
+
+@media(max-width: 800px) {
+    .titulo h1 {
+        font-size: 3em;
+    }
+    .titulo h3 {
+        font-size: 2em;
+    }
+    .texto {
+        font-size: 1.3em;
+    }
+}
+
+@media(max-width: 450px) {
+    .titulo h1 {
+        font-size: 2.4em;
+    }
+    .titulo h3 {
+        font-size: 1.8em;
+    }
+    .texto {
+        font-size: 1em;
     }
 }

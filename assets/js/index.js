@@ -33,14 +33,14 @@ function gerarElementos() {
     <div class="row justify-content-between align-items-end text nt-m" id="rodape">
         <p class="card-text">Copyright © 2020 Ind. Safe, Blog</p>
         <div>
-            <div class="cl-4" id="contato">
+            <div id="contato">
                 <p>Contato</p>
                 <ul>
                     <li>+55 11 94325-0000</li>
                     <li>+55 11 94325-0000</li>
                 </ul>
             </div>
-            <div class="cl-4" id="redes-sociais">
+            <div id="redes-sociais">
                 <p>Redes Sociais</p>
                 <ul class="row">
                     <li><a href="https://www.instagram.com/?hl=pt-br"><img src="assets/img/inst.png"></a></li>
@@ -76,7 +76,7 @@ function queryString(parameter) {
 }
 
 function passaValor(inp) {
-    window.location = "search.html?inputValue="+ inp + "&inputCheck=" + document.getElementById("customSwitch1").checked;
+    window.location = "search.html?inputValue="+ inp.replace(/( )+/g, '+') + "&inputCheck=" + document.getElementById("customSwitch1").checked;
 }
 
 function eventosPesquisa() {
