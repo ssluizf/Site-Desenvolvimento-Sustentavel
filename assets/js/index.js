@@ -9,7 +9,7 @@ function gerarElementos() {
         <div class="collapse navbar-collapse" id="navbarSupportedContent1">
             <ul class="navbar-nav mr-auto mt-lg-0">
                 <li><a href="index.html" onclick="darkSwitchNav(event)">HOME</a></li>
-                <li><a href="noticias.html" onclick="darkSwitchNav(event)">NOTÍCIAS</a></li>
+                <li><a href="noticias1.html" onclick="darkSwitchNav(event)">NOTÍCIAS</a></li>
                 <li><a href="sobre.html" onclick="darkSwitchNav(event)">QUEM SOMOS</a></li>
                 <li><a href="#contato">CONTATO</a></li>
             </ul>
@@ -130,6 +130,26 @@ function darkSwitchEvent() {
 }
 
 darkSwitchEvent()
+
+function noticiasNav(e) {
+    let noticia = window.location.pathname
+    let number = parseInt((noticia.slice(noticia.lastIndexOf("/")).replace(/([^\d])+/gim, '')))
+
+    let lastIndex = 2
+
+    if (e.target.innerHTML == "Anterior") {
+        number > 1 ? window.location.href = "noticias" + (number - 1) + ".html" + "?inputCheck=" + document.getElementById("customSwitch1").checked : ''
+    } else if (e.target.innerHTML == "Próximo") {
+        number < lastIndex ? window.location.href = "noticias" + (number + 1) + ".html" + "?inputCheck=" + document.getElementById("customSwitch1").checked : ''
+    }
+}
+
+function noticiasProx() {
+    let noticia = window.location.pathname
+    let number = parseInt((noticia.slice(noticia.lastIndexOf("/")).replace(/([^\d])+/gim, '')))
+
+    number < lastIndex ? window.location.href = "noticias" + (number + 1) + ".html" + "?inputCheck=" + document.getElementById("customSwitch1").checked : ''
+}
 
 function chartColor(chart) {
     let color = ""
