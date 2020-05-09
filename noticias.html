@@ -51,10 +51,10 @@
                     <div class="row">
                         <canvas class="col-lg-7" id="chart02"></canvas>
                         <div class="col-lg-5 text-justify pt-4">
-                            <p>Desmatamento descontrolado: <strong>37</strong></p>
-                            <p>Grande circulação de veículos e maior emissão de gases do efeito estufa: <strong>28</strong></p>
-                            <p>Emissão de gases pelas grandes indústrias: <strong>30</strong></p>
-                            <p>A mudança de temperatura natural do planeta Terra: <strong>6</strong></p>
+                            <p><strong>A: </strong>Desmatamento descontrolado <strong>( 37 votos )</strong></p>
+                            <p><strong>B: </strong>Grande circulação de veículos e maior emissão de gases do efeito estufa <strong>( 28 votos )</strong></p>
+                            <p><strong>C: </strong>Emissão de gases pelas grandes indústrias: <strong>( 30 votos )</strong></p>
+                            <p><strong>D: </strong>A mudança de temperatura natural do planeta Terra <strong>( 6 votos )</strong></p>
                         </div>
                     </div>
                 </div>
@@ -126,7 +126,7 @@
 
             data: {
                 datasets: [{
-                    label: ' Pesquisa Desenvolvimento Sustentável',
+                    label: ' Valor',
                     backgroundColor: [
                         'rgb(48, 110, 50, 0.8)',
                         'rgb(204, 122, 0, 0.8)',
@@ -145,7 +145,7 @@
                     hoverBorderWidth: 4,
                     data: [37, 28, 30, 6],
                 },],
-                labels: ['Desmatamento descontrolado', 'Grande circulação de veículos e maior emissão de gases do efeito estufa', 'Emissão de gases pelas grandes indústrias', 'A mudança de temperatura natural do planeta Terra'],
+                labels: ['A', 'B', 'C', 'D'],
             },
 
             options: {
@@ -153,12 +153,19 @@
                     xAxes: [{
                         display: false,
                     }],
+                    yAxes: [{
+                        ticks: {
+                            fontSize: 16,
+                        },
+                    }],
                 },
                 tooltips: {
-                    bodyFontSize: 14,
-                    titleFontSize: 14,
+                    titleFontSize: 22,
+                    titleAlign: 'center',
+                    bodyFontSize: 20,
                 },
                 legend: {
+                    display: false,
                     labels: {
                         fontSize: 16,
                         }
