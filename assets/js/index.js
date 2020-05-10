@@ -30,7 +30,7 @@ function gerarElementos() {
     `
 
     const rodape = `
-    <div class="row justify-content-between align-items-end text nt-m" id="rodape">
+    <div class="row justify-content-between align-items-end nt-m" id="rodape">
         <p class="card-text">Copyright © 2020 Ind. Safe, Blog</p>
         <div>
             <div id="contato">

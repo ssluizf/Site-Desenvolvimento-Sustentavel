@@ -20,7 +20,7 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.css"></link>
 
         <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css2?family=Girassol&family=Pacifico&family=Sanchez&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Sanchez&family=Girassol" rel="stylesheet">
 
     </head>
     <body>
@@ -32,7 +32,7 @@
 
         <!-- Conteúdo Principal -->
         <div class="nt-m">
-            <div class="container titulo font-frank" id="conteudo">
+            <div class="container titulo font-serif" id="conteudo">
                 <h3 class="text-center">Sejam bem-vindos</h3>
                 <p class="text-justify texto">Nessa página poderão encontrar as pesquisas realizadas sobre as Indústrias Sustentáveis e os ramos do Desenvolvimento Sustentável. Poderão visualizar as empresas que atualmente trabalham com a sustentabilidade, além de, estar a par de todas as notícias no ramo da sustentabilidade. Então venha conhecer mais!</p>
                 <h3 class="text-center">Empresas Participantes das Indústrias Sustentáveis</h3>
@@ -86,10 +86,10 @@
                         <canvas class="" id="chart04"></canvas>
                     </div>
                     <div class="col-lg-5 pt-4">
-                        <p>Nunca ouvi falar: <strong>( A )</strong></p>
-                        <p>Áreas diferentes, mas que se correlacionam no final: <strong>( B )</strong></p>
-                        <p>Economia circular não se complementa com as Indústrias Sustentáveis: <strong>( C )</strong></p>
-                        <p>Já ouvi falar, mas nunca pesquisei: <strong>( D )</strong></p>
+                        <p>Nunca ouvi falar: <strong>( A ) 12 votos</strong></p>
+                        <p>Áreas diferentes, mas que se correlacionam no final: <strong>( B ) 24 votos</strong></p>
+                        <p>Economia circular não se complementa com as Indústrias Sustentáveis: <strong>( C ) 4 votos</strong></p>
+                        <p>Já ouvi falar, mas nunca pesquisei: <strong>( D ) 60 votos</strong></p>
                     </div>
                 </div>
             </div>
@@ -168,9 +168,6 @@
                 },
                 legend: {
                     display: false,
-                    labels: {
-                        fontSize: 16,
-                        }
                     }
                 }
             });
@@ -202,15 +199,12 @@
                 },
 
                 options: {
-                    xAxes: [{
-                            display: false,
-                        }],
                     tooltips: {
                         bodyFontSize: 18,
                     },
                     legend: {
                         display: false,
-                        }
+                    }
                 }
                 });
 
@@ -232,12 +226,7 @@
                         borderWidth: 2,
                         data: [12, 24, 4, 60],
                     },],
-                    labels: [
-                        ' A',
-                        ' B',
-                        ' C',
-                        ' D', 
-                    ],
+                    labels: [' A',' B',' C',' D'],
                 },
 
                 options: {
@@ -246,7 +235,7 @@
                     },
                     legend: {
                         display: false,
-                        }
+                    }
                 }
             });
         </script>

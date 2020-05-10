@@ -26,6 +26,12 @@ img {
     display: flex;
 }
 
+.img-blur {
+    filter: blur(3px);
+}
+
+/* Night Mode */
+
 .night-mode {
     background-color: #1f2123;
     color: #e1f5fe !important;
@@ -78,10 +84,6 @@ a:hover {
     padding-bottom: 80px;
 }
 
-.img-blur {
-    filter: blur(3px);
-}
-
 /* Titulo */
 
 .titulo h1 {
@@ -103,7 +105,7 @@ a:hover {
     font-weight: bold;
 }
 
-/* Listas */
+/* Texto */
 
 .texto {
     padding-bottom: 4em;
@@ -135,12 +137,12 @@ a:hover {
     font-family: 'Sanchez', serif;
 }
 
-.font-frank {
-    font-family: 'Frank Ruhl Libre', serif;
+.font-serif {
+    font-family: serif;
 }
 
 .font-girassol {
-    font-family: 'Girassol', cursive;
+    font-family: 'Girassol', sans-serif;
 }
 
 /* Rodapé */
