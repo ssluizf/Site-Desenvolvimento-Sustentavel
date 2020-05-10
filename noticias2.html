@@ -20,7 +20,7 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.css"></link>
 
         <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css2?family=Girassol&family=Pacifico&family=Sanchez&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Sanchez&family=Girassol" rel="stylesheet">
 
     </head>
     <body>
@@ -33,7 +33,7 @@
         <!-- Conteúdo Principal -->
 
         <div class="nt-m">
-            <div class="container titulo font-frank" id="conteudo">
+            <div class="container titulo font-serif" id="conteudo">
                 <h3>O Rompimento da Barragem em Brumadinho: Causa sérios danos ao meio ambiente e impacto na produção das indústrias mineradoras.</h3>
                 <p class="texto text-justify">Dados do IBGE revelam que no em 2019 o setor de produção industrial recuou 1,1%. Em decorrência, ao Rompimento da Barragem de Brumadinho, o setor extrativo apresentou grande queda nos Estados de Minas Gerais (-25,3%) e Espírito Santo (-21,1%), marcando negativamente o setor no ano do acidente. Veja uma pergunta da nossa enquete sobre o tema: </p>
                 <div class="texto">
@@ -41,10 +41,10 @@
                     <div class="row">
                         <canvas class="col-lg-8" id="chart06"></canvas>
                         <div class="col-lg-4 text-justify">
-                            <p><strong>A: </strong>Aumentaria o monitoramento sobre a vida útil dos aparelhos e seu gasto energético</p>
-                            <p><strong>B: </strong>Conscientizaria suas redes sobre a importância do desenvolvimento sustentável nas indústrias</p>
-                            <p><strong>C: </strong>Investiria na separação dos resíduos/lixos industriais, para promover o reaproveitamento futuro</p>
-                            <p><strong>D: </strong>Criaria um sistema de reutilização da água utilizada nos setores da indústria</p>
+                            <p><strong>A: </strong>Aumentaria o monitoramento sobre a vida útil dos aparelhos e seu gasto energético (11,9% - 12 Votos)</p>
+                            <p><strong>B: </strong>Conscientizaria suas redes sobre a importância do desenvolvimento sustentável nas indústrias (10,9% - 11 Votos)</p>
+                            <p><strong>C: </strong>Investiria na separação dos resíduos/lixos industriais, para promover o reaproveitamento futuro (43,6% - 44 Votos)</p>
+                            <p><strong>D: </strong>Criaria um sistema de reutilização da água utilizada nos setores da indústria (33,7% - 34 Votos)</p>
                         </div>
                     </div>
                 </div>
@@ -121,8 +121,8 @@
                         bodyAlign: 'center',	
                     },
                     legend: {
-                            display: false,
-                        }
+                        display: false,
+                    }
                 }
                 });
 
@@ -133,7 +133,7 @@
 
                 data: {
                     datasets: [{
-                        label: 'Você acredita que toda matéria-prima é infinita?',
+                        label: 'Se você fosse encarregado de gerir uma nova gestão em sua indústria, para ingressa-la no quadro do “Desenvolvimento Sustentável”. Qual medida imediata você tomaria?',
                         backgroundColor: [
                             'rgb(204, 72, 0)',
                             '#a7154e',
@@ -144,12 +144,7 @@
                         borderWidth: 3,
                         data: [12, 11, 44, 34],
                     },],
-                    labels: [
-                        ' A',
-                        ' B',
-                        ' C',
-                        ' D', 
-                    ],
+                    labels: [' A',' B',' C',' D'],
                 },
 
                 options: {
@@ -158,8 +153,8 @@
                         bodyAlign: 'center',	
                     },
                     legend: {
-                            display: false,
-                        }
+                        display: false,
+                    }
                 }
             });
         </script>
