@@ -30,26 +30,26 @@ function gerarElementos() {
     `
 
     const rodape = `
-    <div class="row justify-content-between align-items-end nt-m" id="rodape">
-        <p class="card-text">Copyright © 2020 Ind. Safe, Blog</p>
-        <div>
-            <div id="contato">
-                <p>Contato</p>
-                <ul>
-                    <li>+55 11 94325-0000</li>
-                    <li>+55 11 94325-0000</li>
-                </ul>
-            </div>
-            <div id="redes-sociais">
-                <p>Redes Sociais</p>
-                <ul class="row">
-                    <li><a href="https://www.instagram.com/?hl=pt-br"><img src="assets/img/inst.png"></a></li>
-                    <li><a href="https://twitter.com/login?lang=pt"><img src="assets/img/twt.png"></a></li>
-                    <li><a href="https://pt-br.facebook.com/"><img src="assets/img/fcb.png"></a></li>
-                    <li><a href="https://www.youtube.com/?gl=BR&hl=pt"><img src="assets/img/ytb.png"></a></li>
-                </ul> 
-            </div>  
-        </div>  
+    <div class="row justify-content-between align-items-end nt-m" id="rodape"> 
+        <div class="col-md-3" id="contato">
+            <p>Contato</p>
+            <ul>
+                <li>+55 11 94325-0000</li>
+                <li>+55 11 94325-0000</li>
+            </ul>
+        </div>
+        <div class="col-md-3" id="redes-sociais">
+            <p>Redes Sociais</p>
+            <ul class="row">
+                <li><a href="https://www.instagram.com/?hl=pt-br"><img src="assets/img/inst.png"></a></li>
+                <li><a href="https://twitter.com/login?lang=pt"><img src="assets/img/twt.png"></a></li>
+                <li><a href="https://pt-br.facebook.com/"><img src="assets/img/fcb.png"></a></li>
+                <li><a href="https://www.youtube.com/?gl=BR&hl=pt"><img src="assets/img/ytb.png"></a></li>
+            </ul> 
+        </div>
+        <div class="col-md-6">    
+            <p class="card-text" id="copyright">Copyright © 2020 Ind. Safe, Blog</p>
+        </div>     
     </div>`;
     
     document.getElementById("web-top").outerHTML += cabecalho;

@@ -129,6 +129,8 @@ a:hover {
 
 /* Fonts */
 
+
+
 .font-pacifico {
     font-family: 'Pacifico', cursive;
 }
@@ -149,13 +151,13 @@ a:hover {
 
 #rodape {
     background-color: #607d8b;
-    padding: 40px 20px 20px 40px;
+    padding: 15px 20px 20px 40px;
     box-shadow: 2px 0px 10px #000;
 }
 
 #rodape p {
+    padding-left: 25px;
     font-weight: bold;
-    padding-right: 20px;
     font-size: 1.2em;
 }
 
@@ -163,8 +165,13 @@ a:hover {
     font-size: 1.1em;
 }
 
+#copyright{
+    text-align: center;
+}
+
 #redes-sociais li {
-    padding-right: 20px;
+    padding-right: 10px;
+    padding-bottom: 20px;
 }
 
 #redes-sociais img {
@@ -178,7 +185,8 @@ a:hover {
 
 #contato {
     padding-right: 45px;
-    padding-bottom: 20px;
+    padding-bottom: 10px;
+    padding-top: 10px;
 }
 
 /* Media Queries */
@@ -233,6 +241,9 @@ a:hover {
     }
     .texto {
         font-size: 1.3em;
+    }
+    p#copyright{
+        padding-left: 0px;
     }
 }
 
