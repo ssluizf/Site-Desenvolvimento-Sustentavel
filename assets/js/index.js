@@ -5,19 +5,21 @@ function gerarElementos() {
     const cabecalho = `
     <div id="cabecalho" class="sticky-top">
         <nav class="navbar navbar-dark navbar-expand-lg font-pacifico">
-        <button class="navbar-toggler toggler-example" type="button" data-toggle="collapse" data-target="#navbarSupportedContent1" aria-controls="navbarSupportedContent1" aria-expanded="false" aria-label="Toggle navigation"><span class="dark-blue-text"><i class="navbar-toggler-icon"></i></span></button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent1">
-            <ul class="navbar-nav mr-auto mt-lg-0">
-                <li><a href="index.html" onclick="darkSwitchNav(event)">HOME</a></li>
-                <li><a href="noticias1.html" onclick="darkSwitchNav(event)">NOTÍCIAS</a></li>
-                <li><a href="sobre.html" onclick="darkSwitchNav(event)">QUEM SOMOS</a></li>
-                <li><a href="#contato">CONTATO</a></li>
-            </ul>
-            <form class="form-row justify-content-center my-2 my-lg-0" autocomplete=off id="search-box">
-                <input class="col-sm-8 form-control mr-sm-4" type="search" id="input" placeholder="Buscar" aria-label="Search">
-                <button class="btn btn-outline-info my-2 my-sm-0" type="button" id="search-button">Buscar</button>
-            </form>
-        </div>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent1" aria-controls="navbarSupportedContent1" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent1">
+                <ul class="navbar-nav mr-auto mt-lg-0">
+                    <li><a href="index.html" onclick="darkSwitchNav(event)">HOME</a></li>
+                    <li><a href="noticias1.html" onclick="darkSwitchNav(event)">NOTÍCIAS</a></li>
+                    <li><a href="sobre.html" onclick="darkSwitchNav(event)">QUEM SOMOS</a></li>
+                    <li><a href="#contato">CONTATO</a></li>
+                </ul>
+                <form class="form-row justify-content-center my-2 my-lg-0" autocomplete=off id="search-box">
+                    <input class="col-sm-8 form-control mr-sm-4" type="search" id="input" placeholder="Buscar" aria-label="Search">
+                    <button class="btn btn-outline-info my-2 my-sm-0" type="button" id="search-button">Buscar</button>
+                </form>
+            </div>
         </nav>
     </div>
     `;
@@ -30,26 +32,28 @@ function gerarElementos() {
     `
 
     const rodape = `
-    <div class="row justify-content-between align-items-end nt-m" id="rodape"> 
-        <div class="col-md-3" id="contato">
-            <p>Contato</p>
-            <ul>
-                <li>+55 11 94325-0000</li>
-                <li>+55 11 94325-0000</li>
-            </ul>
+    <div class="container-fluid">
+        <div class="row justify-content-between align-items-end nt-m" id="rodape"> 
+            <div class="col-md-4" id="contato">
+                <p>Contato</p>
+                <ul>
+                    <li>+55 11 94325-0000</li>
+                    <li>+55 11 94325-0000</li>
+                </ul>
+            </div>
+            <div class="col-md-3 pb-4" id="redes-sociais">
+                <p>Redes Sociais</p>
+                <ul class="row pl-2">
+                    <li><a href="https://www.instagram.com/?hl=pt-br"><img src="assets/img/inst.png"></a></li>
+                    <li><a href="https://twitter.com/login?lang=pt"><img src="assets/img/twt.png"></a></li>
+                    <li><a href="https://pt-br.facebook.com/"><img src="assets/img/fcb.png"></a></li>
+                    <li><a href="https://www.youtube.com/?gl=BR&hl=pt"><img src="assets/img/ytb.png"></a></li>
+                </ul> 
+            </div>
+            <div class="col-lg-5">    
+                <p class="text-center">Copyright © 2020 Ind. Safe, Blog</p>
+            </div>     
         </div>
-        <div class="col-md-3" id="redes-sociais">
-            <p>Redes Sociais</p>
-            <ul class="row">
-                <li><a href="https://www.instagram.com/?hl=pt-br"><img src="assets/img/inst.png"></a></li>
-                <li><a href="https://twitter.com/login?lang=pt"><img src="assets/img/twt.png"></a></li>
-                <li><a href="https://pt-br.facebook.com/"><img src="assets/img/fcb.png"></a></li>
-                <li><a href="https://www.youtube.com/?gl=BR&hl=pt"><img src="assets/img/ytb.png"></a></li>
-            </ul> 
-        </div>
-        <div class="col-md-6">    
-            <p class="card-text" id="copyright">Copyright © 2020 Ind. Safe, Blog</p>
-        </div>     
     </div>`;
     
     document.getElementById("web-top").outerHTML += cabecalho;

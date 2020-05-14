@@ -1,13 +1,4 @@
-
 /* Padrões */
-
-body {
-    overflow-x: hidden; 
-    overflow-y: auto;
-    background-color: #f2f2f2;
-    width: 100%;
-    height: 100%;
-}
 
 h1, img, nav, #rodape, .card-header, #dark-switch{
     user-select: none;
@@ -32,6 +23,10 @@ img {
 
 /* Night Mode */
 
+.nt-m {
+    background-color: #f2f2f2;
+}
+
 .night-mode {
     background-color: #1f2123;
     color: #e1f5fe !important;
@@ -54,8 +49,8 @@ img {
 #dark-switch {
     position: absolute;
     right: 10px;
-    background-color: transparent;
     padding-top: 10px;
+    background-color: transparent;
 }
 
 /* Cabeçalho */
@@ -129,8 +124,6 @@ a:hover {
 
 /* Fonts */
 
-
-
 .font-pacifico {
     font-family: 'Pacifico', cursive;
 }
@@ -151,12 +144,15 @@ a:hover {
 
 #rodape {
     background-color: #607d8b;
-    padding: 15px 20px 20px 40px;
+    padding: 30px 20px 20px 40px;
     box-shadow: 2px 0px 10px #000;
 }
 
+#rodape div {
+    padding-top: 20px;
+}
+
 #rodape p {
-    padding-left: 25px;
     font-weight: bold;
     font-size: 1.2em;
 }
@@ -165,13 +161,8 @@ a:hover {
     font-size: 1.1em;
 }
 
-#copyright{
-    text-align: center;
-}
-
 #redes-sociais li {
-    padding-right: 10px;
-    padding-bottom: 20px;
+    padding-right: 15px;
 }
 
 #redes-sociais img {
@@ -181,12 +172,6 @@ a:hover {
 
 #redes-sociais a {
     background-color: transparent !important;
-}
-
-#contato {
-    padding-right: 45px;
-    padding-bottom: 10px;
-    padding-top: 10px;
 }
 
 /* Media Queries */
@@ -201,12 +186,8 @@ a:hover {
 }
 
 @media(max-width: 989px){
-    #cabecalho a{
+    #cabecalho a {
         padding: 0cm;
-    }
-
-    #cabecalho > nav > div {
-        margin-top: -10px;
     }
 
     #cabecalho ul {
@@ -226,24 +207,20 @@ a:hover {
     #search-box > button {
         display: none;
     }
-
-    #search-box:hover #search-button {
-        display: block;
-    }
 }
 
 @media(max-width: 800px) {
     .titulo h1 {
         font-size: 3em;
     }
+    .titulo h2 {
+        font-size: 2.5em;
+    }
     .titulo h3 {
         font-size: 2em;
     }
     .texto {
         font-size: 1.3em;
-    }
-    p#copyright{
-        padding-left: 0px;
     }
 }
 
