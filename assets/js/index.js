@@ -8,17 +8,17 @@ function gerarElementos() {
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent1" aria-controls="navbarSupportedContent1" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent1">
+            <div class="collapse navbar-collapse flex-row-reverse" id="navbarSupportedContent1">
+                <form class="form-row justify-content-center my-2 my-lg-0" autocomplete=off id="search-box">
+                    <input class="col-sm-8 form-control mr-sm-4" type="search" id="input" placeholder="Buscar" aria-label="Search">
+                    <button class="btn btn-outline-info my-2 my-sm-0" type="button" id="search-button">Buscar</button>
+                </form>
                 <ul class="navbar-nav mr-auto mt-lg-0">
                     <li><a href="index.html" onclick="darkSwitchNav(event)">HOME</a></li>
                     <li><a href="noticias1.html" onclick="darkSwitchNav(event)">NOTÍCIAS</a></li>
                     <li><a href="sobre.html" onclick="darkSwitchNav(event)">QUEM SOMOS</a></li>
                     <li><a href="#contato">CONTATO</a></li>
                 </ul>
-                <form class="form-row justify-content-center my-2 my-lg-0" autocomplete=off id="search-box">
-                    <input class="col-sm-8 form-control mr-sm-4" type="search" id="input" placeholder="Buscar" aria-label="Search">
-                    <button class="btn btn-outline-info my-2 my-sm-0" type="button" id="search-button">Buscar</button>
-                </form>
             </div>
         </nav>
     </div>
